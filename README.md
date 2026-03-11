@@ -2,7 +2,7 @@
 
 #### Sistema Gestor de Guarderías y Escuelas Infantiles
 
-![Portada](https://kanban.etb-apps.com/?controller=FileViewerController&action=image&file_id=28&task_id=18&etag=a28003695de4f99c1cd459dfc481e79c)
+![Portada](https://kanban.etb-apps.com/?controller=FileViewerController&action=download&task_id=18&file_id=28&etag=a28003695de4f99c1cd459dfc481e79c)
 
 ![Portada](https://kanban.etb-apps.com/?controller=FileViewerController&action=image&file_id=19&task_id=16&etag=beb1656e4867f32bc3b652951622ed33)
 
