@@ -2,13 +2,13 @@
 
 #### Sistema Gestor de Guarderías y Escuelas Infantiles
 
-![Portada](https://kanban.etb-apps.com/?controller=FileViewerController&action=download&task_id=18&file_id=28&etag=a28003695de4f99c1cd459dfc481e79c)
+![Portada](https://kanban.etb-apps.com/public/Portada-Alejandro.jpg)
 
-![Portada](https://kanban.etb-apps.com/?controller=FileViewerController&action=image&file_id=19&task_id=16&etag=beb1656e4867f32bc3b652951622ed33)
+![Portada](https://kanban.etb-apps.com/public/Portada-Miguel.jpg)
 
-![Portada](https://kanban.etb-apps.com/?controller=FileViewerController&action=image&file_id=22&task_id=17&etag=ca2f114b27259ad802d2ced6a163f7a8)
+![Portada](https://kanban.etb-apps.com/public/Portada-Bartosz.jpg)
 
-![Prototipo](https://kanban.etb-apps.com/?controller=FileViewerController&action=image&file_id=14&task_id=12&etag=fa87566f91c4784938f8761ea004e30b)
+![Prototipo](https://kanban.etb-apps.com/public/tablet.png)
 
 ---
 
@@ -37,6 +37,10 @@ procesos siguen sin estar optimizados. A nivel tecnológico, la mayoría de los
 centros carece de una plataforma centralizada, dependiendo todavía de métodos
 tradicionales para la gestión diaria (registros en papel, hojas de cálculo
 independientes, agendas físicas y canales informales como WhatsApp).
+
+![Diagrama de Ishikawa](https://kanban.etb-apps.com/public/diagrama-ishikawa.jpg)
+
+![Diagrama 5 Why's, 2 How's](https://kanban.etb-apps.com/public/diagrama-5-why.jpg)
 
 ---
 
