@@ -1,5 +1,6 @@
 package dam.proyecto.gestionguarderia;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,6 +10,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SplashScreen extends AppCompatActivity {
+
+    private ConfigApp config;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,4 +24,14 @@ public class SplashScreen extends AppCompatActivity {
             return insets;
         });
     }
+
+    // TODO SERVICIOS
+    this.config = new ConfigApp(this);
+
+    // Una vez cargados los serivicios necesarios, pasamos a la actividad principal y finalizamos esta
+    new android.os.Handler().postDelayed(() -> {
+        startActivity(new Intent(SplashScreen.this, MainActivity.class));
+        finish();
+    }, 2000);
+
 }
