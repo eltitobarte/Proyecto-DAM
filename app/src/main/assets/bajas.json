@@ -1,0 +1,24 @@
+[
+    {
+        "codigo":"2",
+        "nombre":"Juan",
+        "apellidos":"Roman Perez",
+        "fechaBaja":"14/03/2026",
+        "estado":"COMPLETA",
+        "idAdmin":"3"
+    }
+
+    {
+        "codigo":"2",
+        "nombre":"Sofia",
+        "apellidos":"Hernandez Guzman",
+        "fechaBaja":"14/03/2026",
+        "estado":"EN TRAMITE",
+        "idAdmin":"4"
+
+    }
+
+
+
+
+]
