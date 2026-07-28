@@ -1,4 +1,21 @@
 [
+       {
+        "idUsuario":"1",
+        "telefono": "654321987"
+    },
+    
+
+    {
+        "idUsuario":"2",
+        "telefono": "645853009"
+    },
+
+    {
+        "idUsuario":"3",
+        "telefono": "686375421"
+    },
+
+    
     {
         "idUsuario":"4",
         "telefono": "649274910"
@@ -6,8 +23,21 @@
 
     {
         "idUsuario":"5",
-        "telefono": "649274910"
+        "telefono": "698754367"
+    },
+
+    {
+        "idUsuario":"6",
+        "telefono": "669325144"
+    },
+
+    {
+        "idUsuario":"7",
+        "telefono": "678396184"
     }
+
+    
+
 
 
 
