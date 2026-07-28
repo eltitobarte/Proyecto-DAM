@@ -3,7 +3,7 @@
         "codigo": "1",
         "nombreAula":"Perro",
         "profesorNombre":"Lucia Jimenez Marin",
-        "idProfesor":"1"
+        "idProfesor":"6"
 
     },
 
@@ -12,7 +12,7 @@
         "codigo": "2",
         "nombreAula":"Gato",
         "profesorNombre":"Pedro Martin Ruiz",
-        "idProfesor": "2"
+        "idProfesor": "7"
 
     }
 
