@@ -1,0 +1,15 @@
+[
+  {
+    "idUsuario": "4",
+    "nombre": "Rosa",
+    "apellidos": "Salinas Torres"
+  },
+
+
+  {
+    "idUsuario": "5",
+    "nombre": "Mario",
+		"apellidos": "Pulido Parra"
+  }
+
+]
