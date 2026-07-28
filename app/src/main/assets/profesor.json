@@ -2,13 +2,13 @@
   {
     "idUsuario": "6",
     "nombre": "Lucia",
-		"apellidos": "Jimenez Marin"
+	"apellidos": "Jimenez Marin"
   },
 
   {
     "idUsuario": "7",
     "nombre": "Pedro",
-		"apellidos": "Martin Ruiz"
+	"apellidos": "Martin Ruiz"
   }
   
 ]
