@@ -5,10 +5,7 @@
 		"rol": "ADMINISTRADOR",
 		"contrasenya": "",
 		"nombre": "Pepito",
-		"apellidos": "Garcia Lopez",
-		"telefono": "654321987"
-
-		
+		"apellidos": "Garcia Lopez"
 	},
 
 	{
@@ -17,9 +14,7 @@
 		"rol": "ADMINISTRACION",
 		"contrasenya": "",
 		"nombre": "Maria",
-		"apellidos": "Perez Salcedo",
-		"telefono": "645853009"
-
+		"apellidos": "Perez Salcedo"
 		
 	},
 
@@ -30,10 +25,7 @@
 		"rol": "ADMINISTRACION",
 		"contrasenya": "",
 		"nombre": "Jose",
-		"apellidos": "Fernandez Cruz",
-		"telefono": "686375421"
-
-		
+		"apellidos": "Fernandez Cruz"
 	},
 
 
@@ -44,10 +36,7 @@
 		"rol": "TUTOR LEGAL",
 		"contrasenya": "",
 		"nombre": "Rosa",
-		"apellidos": "Salinas Torres",
-		"telefono": "649274910"
-
-		
+		"apellidos": "Salinas Torres"
 	},
 
 	{
@@ -56,10 +45,7 @@
 		"rol": "TUTOR LEGAL",
 		"contrasenya": "",
 		"nombre": "Mario",
-		"apellidos": "Pulido Parra",
-		"telefono": "649274910"
-
-		
+		"apellidos": "Pulido Parra"
 	},
 
 
@@ -70,23 +56,17 @@
 		"rol": "PROFESOR",
 		"contrasenya": "",
 		"nombre": "Lucia",
-		"apellidos": "Jimenez Marin",
-		"telefono": "669325144"
-
-		
+		"apellidos": "Jimenez Marin"
 	},
 
 
 	{
-		"idUsuario": "6",
+		"idUsuario": "7",
 		"correoElectronico": "pemarru@ejemplo.com",
 		"rol": "PROFESOR",
 		"contrasenya": "",
 		"nombre": "Pedro",
-		"apellidos": "Martin Ruiz",
-		"telefono": "678396184"
-
-		
+		"apellidos": "Martin Ruiz"
 	}
 
 	
