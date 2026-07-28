@@ -1,8 +1,6 @@
 [
     {
         "codigo":"1",
-        "nombre":"Alvaro",
-        "apellidos":"Pulido Torres",
         "fechaAlta":"26/06/2025",
         "estado":"COMPLETA",
         "idAdmin":"2"
@@ -10,8 +8,6 @@
 
   {
         "codigo":"2",
-        "nombre":"Cristina",
-        "apellidos":"Pulido Torres",
         "fechaAlta":"10/03/2026",
         "estado":"COMPLETA",
         "idAdmin":"3"
