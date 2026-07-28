@@ -1,72 +1,57 @@
 [
 	{
 		"idUsuario": "1",
-		"correoElectronico": "pepgarlop@ejemplo.com",
 		"rol": "ADMINISTRADOR",
 		"contrasenya": "",
-		"nombre": "Pepito",
-		"apellidos": "Garcia Lopez"
+		"correoElectronico": "pepgarlop@ejemplo.com"
 	},
 
 	{
 		"idUsuario": "2",
-		"correoElectronico": "marpersal@ejemplo.com",
 		"rol": "ADMINISTRACION",
 		"contrasenya": "",
-		"nombre": "Maria",
-		"apellidos": "Perez Salcedo"
-		
+		"correoElectronico": "marpersal@ejemplo.com"
 	},
 
 
 	{
 		"idUsuario": "3",
-		"correoElectronico": "josfercru@ejemplo.com",
 		"rol": "ADMINISTRACION",
 		"contrasenya": "",
-		"nombre": "Jose",
-		"apellidos": "Fernandez Cruz"
+		"correoElectronico": "josfercru@ejemplo.com"
 	},
 
 
 
 	{
 		"idUsuario": "4",
-		"correoElectronico": "rossaltor@ejemplo.com",
 		"rol": "TUTOR LEGAL",
 		"contrasenya": "",
-		"nombre": "Rosa",
-		"apellidos": "Salinas Torres"
+		"correoElectronico": "rossaltor@ejemplo.com"
 	},
 
 	{
 		"idUsuario": "5",
-		"correoElectronico": "marpupar@ejemplo.com",
 		"rol": "TUTOR LEGAL",
 		"contrasenya": "",
-		"nombre": "Mario",
-		"apellidos": "Pulido Parra"
+		"correoElectronico": "marpupar@ejemplo.com"
 	},
 
 
 
 	{
 		"idUsuario": "6",
-		"correoElectronico": "lujimar@ejemplo.com",
 		"rol": "PROFESOR",
 		"contrasenya": "",
-		"nombre": "Lucia",
-		"apellidos": "Jimenez Marin"
+		"correoElectronico": "lujimar@ejemplo.com"
 	},
 
 
 	{
 		"idUsuario": "7",
-		"correoElectronico": "pemarru@ejemplo.com",
 		"rol": "PROFESOR",
 		"contrasenya": "",
-		"nombre": "Pedro",
-		"apellidos": "Martin Ruiz"
+		"correoElectronico": "pemarru@ejemplo.com"
 	}
 
 	
