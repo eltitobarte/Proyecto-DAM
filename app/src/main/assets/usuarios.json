@@ -1,0 +1,58 @@
+[
+	{
+		"idUsuario": "1",
+		"rol": "ADMINISTRADOR",
+		"contrasenya": "",
+		"correoElectronico": "pepgarlop@ejemplo.com"
+	},
+
+	{
+		"idUsuario": "2",
+		"rol": "ADMINISTRACION",
+		"contrasenya": "",
+		"correoElectronico": "marpersal@ejemplo.com"
+	},
+
+
+	{
+		"idUsuario": "3",
+		"rol": "ADMINISTRACION",
+		"contrasenya": "",
+		"correoElectronico": "josfercru@ejemplo.com"
+	},
+
+
+
+	{
+		"idUsuario": "4",
+		"rol": "TUTOR LEGAL",
+		"contrasenya": "",
+		"correoElectronico": "rossaltor@ejemplo.com"
+	},
+
+	{
+		"idUsuario": "5",
+		"rol": "TUTOR LEGAL",
+		"contrasenya": "",
+		"correoElectronico": "marpupar@ejemplo.com"
+	},
+
+
+
+	{
+		"idUsuario": "6",
+		"rol": "PROFESOR",
+		"contrasenya": "",
+		"correoElectronico": "lujimar@ejemplo.com"
+	},
+
+
+	{
+		"idUsuario": "7",
+		"rol": "PROFESOR",
+		"contrasenya": "",
+		"correoElectronico": "pemarru@ejemplo.com"
+	}
+
+	
+]

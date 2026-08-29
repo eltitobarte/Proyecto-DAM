@@ -1,0 +1,19 @@
+[
+    {
+        "codigo":"1",
+        "fecha":"01/01/2026",
+        "comida":"Bacalao en salsa",
+        "alumnoCodigo":"1",
+    },
+
+     {
+        "codigo":"2",
+        "fecha":"01/01/2026",
+        "comida":"Pollo con patatas",
+        "alumnoCodigo":"2",
+    }
+
+
+
+
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "codigo":"1",
+        "fechaAlta":"26/06/2025",
+        "estado":"COMPLETA",
+        "idAdmin":"2"
+    },
+
+  {
+        "codigo":"2",
+        "fechaAlta":"10/03/2026",
+        "estado":"COMPLETA",
+        "idAdmin":"3"
+    }      
+
+
+]

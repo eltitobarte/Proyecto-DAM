@@ -1,0 +1,19 @@
+[
+    {
+        "codigo": "1",
+        "nombre":"Alvaro",
+        "apellidos":"Pulido Torres",
+        "fechaNacimiento":"15/03/2025",
+        "codigoAula":"1"
+    },
+
+    {
+        "codigo": "2",
+        "nombre":"Cristina",
+        "apellidos":"Pulido Torres",
+        "fechaNacimiento":"20/01/2026",
+        "codigoAula":"2"
+    } 
+
+
+]    
