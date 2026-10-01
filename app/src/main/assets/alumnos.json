@@ -4,7 +4,8 @@
         "nombre":"Alvaro",
         "apellidos":"Pulido Torres",
         "fechaNacimiento":"15/03/2025",
-        "codigoAula":"1"
+        "codigoAula":"1",
+        "tutorlegalCodigo" : "4"
     },
 
     {
@@ -12,7 +13,8 @@
         "nombre":"Cristina",
         "apellidos":"Pulido Torres",
         "fechaNacimiento":"20/01/2026",
-        "codigoAula":"2"
+        "codigoAula":"2",
+        "tutorlegalCodigo" : "5"
     } 
 
 
