@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PANTALLA: CONFIRMACIÓN DE ENVÍO — copiada del Figma real (412 x 892)
+
+    Solo tiene tres cosas, todo centrado:
+      1. círculo verde con check (imagen)
+      2. mensaje principal (24sp, negrita)
+      3. mensaje secundario (15sp)
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_screen"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- ===================== 1. CÍRCULO VERDE ===================== -->
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="257dp"
+            android:layout_height="257dp"
+            android:layout_marginTop="115dp"
+            android:contentDescription="@null"
+            android:src="@drawable/check_circle" />
+
+        <!-- ===================== 2. MENSAJE PRINCIPAL ===================== -->
+        <TextView
+            android:id="@+id/tvMessage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/sent_message_1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- ===================== 3. MENSAJE SECUNDARIO ===================== -->
+        <TextView
+            android:id="@+id/tvMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/sent_message_2"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</ScrollView>

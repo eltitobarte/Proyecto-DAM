@@ -7,4 +7,23 @@
     <color name="tertiary">#FF292D30</color>
     <color name="grey">#FF676B6E</color>
     <color name="salmon">#FFD5ADA4</color>
+    <color name="back_screen">#FFD9D9D9</color>
+
+    <!-- Estados de los campos de texto -->
+    <color name="input_stroke_idle">#FF93AAA2</color>
+    <color name="input_stroke_focused">#FF292D30</color>
+    <color name="text_hint">#FF676B6E</color>
+    <color name="text_hint_dark">#FF49454F</color>
+
+    <!-- Colores del diseño de Inicio (Figma) -->
+    <color name="app_bar_bg">#FFF3EDF7</color>
+    <color name="on_surface">#FF1D1B20</color>
+    <color name="card_stroke">#FFCAC4D0</color>
+    <color name="avatar_bg">#FFEADDFF</color>
+    <color name="avatar_text">#FF4F378A</color>
+    <color name="tile_dark">#FF49454F</color>
+    <color name="divider">#FFC4C4C4</color>
+    <color name="face_green">#FF36C361</color>
+    <color name="face_yellow">#FFFFC107</color>
+    <color name="face_red">#FFFF0000</color>
 </resources>

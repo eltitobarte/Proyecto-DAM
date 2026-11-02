@@ -1,3 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gestion Guarderia</string>
+
+    <!-- ===== Login ===== -->
+    <string name="login_label_user">User</string>
+    <string name="login_hint_user">Introduzca su usuario</string>
+    <string name="login_label_pwd">Pwd</string>
+    <string name="login_hint_pwd">Introduzca su contraseña</string>
+    <string name="login_remember">Recordar contraseña</string>
+    <string name="login_forgot">¿Has olvidado tu contraseña?</string>
+    <string name="login_button">Acceder</string>
+    <string name="cd_clear">Borrar</string>
+
+    <!-- ===== Recuperar contraseña ===== -->
+    <string name="forgot_title">Introduzca su correo electrónico para recuperar su contraseña:</string>
+    <string name="forgot_label_mail">Mail</string>
+    <string name="forgot_hint_mail">Introduzca su correo electrónico</string>
+    <string name="forgot_button">Enviar</string>
+
+    <!-- ===== Confirmación de envío ===== -->
+    <string name="sent_message_1">Se ha enviado un correo a su dirección para restablecer su contraseña correctamente.</string>
+    <string name="sent_message_2">Comprueba la bandeja de su correo electrónico.\n\nEspere unos segundos y será redirigido a la pantalla de acceso.</string>
+
+    <!-- ===== Inicio (Familia) ===== -->
+    <string name="home_title">Inicio</string>
+    <string name="home_child_name">Nombre del niño</string>
+    <string name="home_child_class">Clase “La Ranita”</string>
+    <string name="home_avatar_initial">A</string>
+
+    <!-- Baby (listado) -->
+    <string name="baby_title">Baby</string>
+    <string name="baby_heading">Mis babies:</string>
+    <string name="baby_child_1">Hijo 1</string>
+    <string name="baby_child_2">Hijo 2</string>
+    <string name="cd_open_child">Abrir ficha del niño</string>
+
+    <!-- Diario del niño -->
+    <string name="diary_title">Hijo 1</string>
+    <string name="diary_heading">Hijo 1 - (Nombre)</string>
+    <string name="diary_notif_title">Notificaciones relevantes:</string>
+    <string name="diary_notif_text">Aquí aparecen indicaciones relevantes sobre el niño en caso de necesidad.</string>
+    <string name="diary_status">Estado general del bebé:</string>
+    <string name="diary_mood">Estoy así\n(Ánimo)</string>
+    <string name="diary_food">¿He comido\nbien?</string>
+    <string name="diary_sleep">¿He\ndormido?</string>
+    <string name="diary_health">¿Y mis pises y\ncacas?</string>
+    <string name="cd_diary_mood">Ánimo</string>
+    <string name="cd_diary_food">Comida</string>
+    <string name="cd_diary_sleep">Siesta</string>
+    <string name="cd_diary_health">Pises y cacas</string>
+
+    <!-- Descripciones de los iconos (accesibilidad) -->
+    <string name="cd_menu">Menú</string>
+    <string name="cd_profile">Perfil</string>
+    <string name="cd_baby">Baby</string>
+    <string name="cd_chat">Chat</string>
+    <string name="cd_notices">Avisos</string>
+    <string name="cd_calendar">Calendario</string>
+    <string name="cd_food">Comida</string>
 </resources>

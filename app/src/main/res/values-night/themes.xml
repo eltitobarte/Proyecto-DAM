@@ -1,7 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.GestionGuarderia" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Misma paleta también en modo noche: el diseño es claro -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/tertiary</item>
+        <item name="colorPrimaryContainer">@color/primary</item>
+        <item name="colorOnPrimaryContainer">@color/tertiary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/tertiary</item>
+        <item name="colorTertiary">@color/salmon</item>
+        <item name="colorOnTertiary">@color/tertiary</item>
+
+        <item name="android:colorBackground">@color/back_screen</item>
+        <item name="colorOnBackground">@color/tertiary</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/tertiary</item>
+        <item name="colorOutline">@color/grey</item>
+
+        <item name="android:statusBarColor">@color/back_screen</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>

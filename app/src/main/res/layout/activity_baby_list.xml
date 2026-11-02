@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PANTALLA: BABY — LISTADO ("Mis babies:")
+    Copiada del Figma real (412 x 892).
+
+    Estructura:
+      ScrollView
+        └── LinearLayout (vertical)
+              ├── barra redondeada (menú + título + perfil)
+              ├── título "Mis babies:"
+              ├── fila Hijo 1 (avatar + nombre + flecha)
+              │     └── línea separadora
+              └── fila Hijo 2 (avatar + nombre + flecha)
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_screen"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <!-- ===================== 1. BARRA SUPERIOR ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_app_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_menu"
+                android:padding="12dp"
+                android:src="@drawable/ic_menu_24"
+                app:tint="@color/tile_dark" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/baby_title"
+                android:textColor="@color/on_surface"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_profile"
+                android:padding="12dp"
+                android:src="@drawable/ic_person_24"
+                app:tint="@color/tile_dark" />
+        </LinearLayout>
+
+        <!-- ===================== 2. TÍTULO ===================== -->
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="22dp"
+            android:text="@string/baby_heading"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- ===================== 3. FILA HIJO 1 ===================== -->
+        <!-- Toda la fila es "pulsable" (48dp de alto) y lleva id -->
+        <LinearLayout
+            android:id="@+id/rowChild1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="7dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingEnd="22dp">
+
+            <!-- Avatar redondo -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_avatar"
+                android:contentDescription="@null"
+                android:padding="8dp"
+                android:src="@drawable/ic_person_24"
+                app:tint="@color/avatar_text" />
+
+            <!-- Nombre. weight=1 para empujar la flecha a la derecha -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="@string/baby_child_1"
+                android:textColor="@color/on_surface"
+                android:textSize="16sp" />
+
+            <!-- Flecha de "entrar" -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_open_child"
+                android:padding="12dp"
+                android:src="@drawable/ic_chevron_right_24"
+                app:tint="@color/tile_dark" />
+        </LinearLayout>
+
+        <!-- Línea separadora -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="22dp"
+            android:background="@color/divider" />
+
+        <!-- ===================== 4. FILA HIJO 2 ===================== -->
+        <LinearLayout
+            android:id="@+id/rowChild2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingEnd="22dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_avatar"
+                android:contentDescription="@null"
+                android:padding="8dp"
+                android:src="@drawable/ic_person_24"
+                app:tint="@color/avatar_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="@string/baby_child_2"
+                android:textColor="@color/on_surface"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_open_child"
+                android:padding="12dp"
+                android:src="@drawable/ic_chevron_right_24"
+                app:tint="@color/tile_dark" />
+        </LinearLayout>
+
+        <!-- Línea separadora final -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="22dp"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+</ScrollView>

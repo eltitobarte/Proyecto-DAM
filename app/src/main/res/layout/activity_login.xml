@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PANTALLA: LOGIN — copiada del Figma real (412 x 892)
+
+    Orden (de arriba abajo):
+      1. logo (imagen)
+      2. campo "User"
+      3. campo "Pwd"
+      4. checkbox "Recordar contraseña"
+      5. enlace "¿Has olvidado tu contraseña?"
+      6. botón negro "Acceder"
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_screen"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="80dp"
+        android:paddingBottom="24dp">
+
+        <!-- ===================== 1. LOGO ===================== -->
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="99dp"
+            android:layout_height="109dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@null"
+            android:src="@drawable/login_logo" />
+
+        <!-- ===================== 2. CAMPO USUARIO ===================== -->
+        <!-- TextInputLayout = caja con etiqueta, línea inferior y aspa de borrar.
+             Todo eso ya viene hecho y con área táctil correcta. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUser"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/login_label_user"
+            app:boxBackgroundColor="#FFE6E0E9"
+            app:boxCornerRadiusTopStart="4dp"
+            app:boxCornerRadiusTopEnd="4dp"
+            app:boxStrokeColor="@color/text_hint_dark"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/text_hint_dark"
+            app:expandedHintEnabled="false"
+            app:hintTextColor="@color/text_hint_dark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_hint_user"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/on_surface"
+                android:textColorHint="@color/on_surface"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===================== 3. CAMPO CONTRASEÑA ===================== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/login_label_pwd"
+            app:boxBackgroundColor="#FFE6E0E9"
+            app:boxCornerRadiusTopStart="4dp"
+            app:boxCornerRadiusTopEnd="4dp"
+            app:boxStrokeColor="@color/text_hint_dark"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/text_hint_dark"
+            app:expandedHintEnabled="false"
+            app:hintTextColor="@color/text_hint_dark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_hint_pwd"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/on_surface"
+                android:textColorHint="@color/on_surface"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===================== 4. CHECKBOX ===================== -->
+        <CheckBox
+            android:id="@+id/cbRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:buttonTint="@color/black"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:minWidth="0dp"
+            android:text="@string/login_remember"
+            android:textColor="#FF1E1E1E"
+            android:textSize="16sp" />
+
+        <!-- ===================== 5. ENLACE ===================== -->
+        <TextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:text="@string/login_forgot"
+            android:textColor="#FF0088FF"
+            android:textSize="16sp" />
+
+        <!-- ===================== 6. BOTÓN ===================== -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="141dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/login_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_check_24"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

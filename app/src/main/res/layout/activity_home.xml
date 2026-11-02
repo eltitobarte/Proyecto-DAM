@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PANTALLA: INICIO (Familia) — copiada del Figma real (412 x 892)
+
+    Estructura:
+
+    ScrollView
+      └── LinearLayout (vertical)
+            ├── barra redondeada (menú + título + perfil)
+            ├── tarjeta salmón (avatar + nombre + clase)
+            └── rejilla de 6 cuadrados (2 columnas x 3 filas)
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_screen"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <!-- ===================== 1. BARRA SUPERIOR ===================== -->
+        <!-- Redondeada (36dp), fondo lila claro, 68dp de alto y 10dp de margen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_app_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <!-- Icono de menú (izquierda) -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_menu"
+                android:padding="12dp"
+                android:src="@drawable/ic_menu_24"
+                app:tint="@color/tile_dark" />
+
+            <!-- Título. weight=1 para empujar el icono de perfil a la derecha -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/home_title"
+                android:textColor="@color/on_surface"
+                android:textSize="22sp" />
+
+            <!-- Icono de perfil (derecha) -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/cd_profile"
+                android:padding="12dp"
+                android:src="@drawable/ic_person_24"
+                app:tint="@color/tile_dark" />
+        </LinearLayout>
+
+        <!-- ===================== 2. TARJETA DEL NIÑO ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardChild"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="26dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/salmon"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <!-- Avatar: círculo lila con la inicial -->
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_avatar"
+                    android:gravity="center"
+                    android:text="@string/home_avatar_initial"
+                    android:textColor="@color/avatar_text"
+                    android:textSize="16sp" />
+
+                <!-- Nombre y clase -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_child_name"
+                        android:textColor="@color/on_surface"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/home_child_class"
+                        android:textColor="@color/on_surface"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== 3. REJILLA DE 6 CUADRADOS ===================== -->
+        <!-- Fila 1: Baby (salmón) + Chat (menta) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="63dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBaby"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/salmon"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_baby"
+                    android:src="@drawable/ic_smiley_24"
+                    app:tint="@color/black" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardChat"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="93dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/primary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_chat"
+                    android:src="@drawable/ic_chat_24"
+                    app:tint="@color/black" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Fila 2: Avisos (oscuro) + Calendario (verde grisáceo) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNotices"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/tile_dark"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_notices"
+                    android:src="@drawable/ic_bell_24"
+                    app:tint="@color/white" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCalendar"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="93dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/secondary"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_calendar"
+                    android:src="@drawable/ic_calendar_24"
+                    app:tint="@color/black" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Fila 3: Perfil (negro) + Comida (blanco) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProfile"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_profile"
+                    android:src="@drawable/ic_person_24"
+                    app:tint="@color/white" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFood"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="93dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_food"
+                    android:src="@drawable/ic_food_24"
+                    app:tint="@color/black" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
