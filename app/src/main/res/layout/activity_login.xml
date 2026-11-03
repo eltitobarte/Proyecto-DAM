@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    PANTALLA: LOGIN — copiada del Figma real (412 x 892)
+    Pantalla de inicio de sesión.
 
-    Orden (de arriba abajo):
-      1. logo (imagen)
-      2. campo "User"
-      3. campo "Pwd"
-      4. checkbox "Recordar contraseña"
-      5. enlace "¿Has olvidado tu contraseña?"
-      6. botón negro "Acceder"
+    Contenido, de arriba abajo:
+      - Logo.
+      - Campo de usuario.
+      - Campo de contraseña.
+      - Checkbox "Recordar contraseña".
+      - Enlace de recuperación de contraseña.
+      - Botón "Acceder".
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -34,8 +34,8 @@
             android:src="@drawable/login_logo" />
 
         <!-- ===================== 2. CAMPO USUARIO ===================== -->
-        <!-- TextInputLayout = caja con etiqueta, línea inferior y aspa de borrar.
-             Todo eso ya viene hecho y con área táctil correcta. -->
+        <!-- TextInputLayout incluye etiqueta, línea inferior y aspa de borrado.
+             El componente ya respeta el área táctil mínima de 48dp. -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilUser"
             style="@style/Widget.Material3.TextInputLayout.FilledBox"

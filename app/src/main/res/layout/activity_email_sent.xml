@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    PANTALLA: CONFIRMACIÓN DE ENVÍO — copiada del Figma real (412 x 892)
+    Pantalla de confirmación de envío de correo.
 
-    Solo tiene tres cosas, todo centrado:
-      1. círculo verde con check (imagen)
-      2. mensaje principal (24sp, negrita)
-      3. mensaje secundario (15sp)
+    Contenido centrado:
+      - Icono circular de confirmación.
+      - Mensaje principal (24sp, negrita).
+      - Mensaje secundario (15sp).
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

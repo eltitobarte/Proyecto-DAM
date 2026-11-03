@@ -26,4 +26,8 @@
     <color name="face_green">#FF36C361</color>
     <color name="face_yellow">#FFFFC107</color>
     <color name="face_red">#FFFF0000</color>
+    <color name="text_hint_soft">#FFB3B3B3</color>
+    <color name="advice_critical">#FFFF5C5C</color>
+    <color name="advice_warning">#FFF5BB00</color>
+    <color name="logout_red">#FFB3261E</color>
 </resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Pantalla de conversación con un profesor.
+
+    Estructura:
+      LinearLayout vertical
+        ├─ barra superior (menú, volver y perfil)
+        ├─ lista de mensajes (con scroll)
+        └─ caja de escritura con el botón de enviar
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_screen"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+
+    <!-- ===================== 1. BARRA SUPERIOR ===================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_app_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/cd_menu"
+            android:padding="12dp"
+            android:src="@drawable/ic_menu_24"
+            app:tint="@color/tile_dark" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/cd_back"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back_24"
+            app:tint="@color/on_surface" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/cd_profile"
+            android:padding="12dp"
+            android:src="@drawable/ic_person_24"
+            app:tint="@color/tile_dark" />
+    </LinearLayout>
+
+    <!-- ===================== 2. MENSAJES ===================== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Mensaje recibido del profesor -->
+            <TextView
+                android:id="@+id/tvMessageReceived"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="51dp"
+                android:background="@drawable/bg_bubble_received"
+                android:lineSpacingExtra="3dp"
+                android:padding="8dp"
+                android:text="@string/chat_detail_message_1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Respuesta del familiar -->
+            <TextView
+                android:id="@+id/tvMessageSent"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_bubble_sent"
+                android:lineSpacingExtra="3dp"
+                android:padding="8dp"
+                android:text="@string/chat_detail_message_2"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ===================== 3. CAJA DE ESCRITURA ===================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/bg_chat_input"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/chat_input_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/on_surface"
+            android:textColorHint="@color/text_hint_soft"
+            android:textSize="16sp" />
+
+        <!-- Fila de acciones: adjuntar, código, voz y enviar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnImage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/cd_attach_image"
+                android:padding="8dp"
+                android:src="@drawable/ic_image_24"
+                app:tint="@color/tile_dark" />
+
+            <ImageView
+                android:id="@+id/btnCode"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/cd_code"
+                android:padding="8dp"
+                android:src="@drawable/ic_code_24"
+                app:tint="@color/tile_dark" />
+
+            <ImageView
+                android:id="@+id/btnMic"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/cd_mic"
+                android:padding="8dp"
+                android:src="@drawable/ic_mic_24"
+                app:tint="@color/tile_dark" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/btnSend"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_send_button"
+                android:contentDescription="@string/cd_send"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_up_24"
+                app:tint="@color/tile_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

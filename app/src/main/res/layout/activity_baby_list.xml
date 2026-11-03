@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    PANTALLA: BABY — LISTADO ("Mis babies:")
-    Copiada del Figma real (412 x 892).
+    Pantalla "Mis babies": listado de niños.
 
     Estructura:
       ScrollView
-        └── LinearLayout (vertical)
-              ├── barra redondeada (menú + título + perfil)
-              ├── título "Mis babies:"
-              ├── fila Hijo 1 (avatar + nombre + flecha)
-              │     └── línea separadora
-              └── fila Hijo 2 (avatar + nombre + flecha)
+        └─ LinearLayout vertical
+             ├─ barra superior (menú, título y perfil)
+             ├─ título
+             ├─ una fila por niño (avatar, nombre y flecha)
+             └─ líneas separadoras
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

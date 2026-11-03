@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    PANTALLA: INICIO (Familia) — copiada del Figma real (412 x 892)
+    Pantalla de inicio del perfil familia.
 
     Estructura:
-
-    ScrollView
-      └── LinearLayout (vertical)
-            ├── barra redondeada (menú + título + perfil)
-            ├── tarjeta salmón (avatar + nombre + clase)
-            └── rejilla de 6 cuadrados (2 columnas x 3 filas)
+      ScrollView
+        └─ LinearLayout vertical
+             ├─ barra superior (menú, título y perfil)
+             ├─ tarjeta del niño (avatar, nombre y clase)
+             └─ rejilla de seis accesos (2 columnas x 3 filas)
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    PANTALLA: BABY — DIARIO (ficha del niño)
-    Medidas sacadas del PNG del Figma (412 x 892).
+    Pantalla del diario del niño.
 
     Estructura:
       ScrollView
-        └── LinearLayout (vertical)
-              ├── barra redondeada
-              ├── título "Hijo 1 - (Nombre)"
-              ├── avatar grande
-              ├── tarjeta salmón (notificaciones)
-              ├── tarjeta blanca (estado general)
-              └── 2 filas de 2 tarjetas (ánimo, comida, siesta, pises)
+        └─ LinearLayout vertical
+             ├─ barra superior
+             ├─ título
+             ├─ avatar
+             ├─ tarjeta de notificaciones
+             ├─ tarjeta de estado general
+             └─ dos filas con dos tarjetas (ánimo, comida, siesta, pises)
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
