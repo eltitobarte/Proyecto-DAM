@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Barra Superior: Menú y Perfil -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/btnMenu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Menú" />
+
+            <ImageView
+                android:id="@+id/btnPerfil"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Perfil" />
+        </RelativeLayout>
+
+        <!-- Tarjeta del Calendario del Mes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Septiembre 2026"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Selector Mes / Navegación -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="‹ Septiembre 2026 ›"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <!-- Días de la semana -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="L" android:textColor="#757575" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="M" android:textColor="#757575" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="X" android:textColor="#757575" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="J" android:textColor="#757575" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="V" android:textColor="#757575" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="S" android:textColor="#757575" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="D" android:textColor="#757575" android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Fila 1: 31, 1, 2, 3, 4, 5, 6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="31" android:textColor="#BDBDBD" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="1" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="2" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="3" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="4" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="5" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="6" android:textColor="#000000" android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Fila 2: 7, 8, 9, 10, 11, 12, 13 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="7" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="8" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="9" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="10" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="11" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="12" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="13" android:textColor="#000000" android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Fila 3: 14, 15 (Verde seleccionado), 16, 17, 18, 19, 20 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="14" android:textColor="#000000" android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDia15"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="#A3C9A8"
+                    android:gravity="center"
+                    android:text="15"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="16" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="17" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="18" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="19" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="20" android:textColor="#000000" android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Fila 4: 21 (Rosa/Rojo), 22, 23, 24 (Verde), 25, 26, 27 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDia21"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="#E5989B"
+                    android:gravity="center"
+                    android:text="21"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="22" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="23" android:textColor="#000000" android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDia24"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="#A3C9A8"
+                    android:gravity="center"
+                    android:text="24"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="25" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="26" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="27" android:textColor="#000000" android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Fila 5: 28, 29, 30 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="28" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="29" android:textColor="#000000" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:gravity="center" android:text="30" android:textColor="#000000" android:textSize="13sp" />
+                <View android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" />
+                <View android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" />
+                <View android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" />
+                <View android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Leyenda inferior -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Los días resaltados tienen actividades programadas."
+                android:textColor="#9E9E9E"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Tarjeta: Eventos del día seleccionados -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTituloEventosDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eventos del día · 15"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Evento 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="09:00 – 11:00"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvNombreEvento1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Entrega de material escolar"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Evento 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="09:00 – 15:00"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvNombreEvento2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Excursión al Planetario de Madrid"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Botón + Añadir evento -->
+        <Button
+            android:id="@+id/btnAnadirEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#EFEFEF"
+            android:padding="14dp"
+            android:text="+ Añadir evento"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

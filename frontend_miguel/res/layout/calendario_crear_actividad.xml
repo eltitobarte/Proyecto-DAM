@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Barra Superior: Menú y Perfil -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/btnMenu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Menú" />
+
+            <ImageView
+                android:id="@+id/btnPerfil"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Perfil" />
+        </RelativeLayout>
+
+        <!-- Tarjeta del Formulario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo evento"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Campo: Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Título"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etTituloEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#FAFAFA"
+                android:hint="Ej. Excursión al Planetario de Madrid"
+                android:padding="12dp"
+                android:text="Excursión al Planetario de Madrid"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- Campo: Fecha -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fecha"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etFechaEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#FAFAFA"
+                android:hint="DD/MM/AAAA"
+                android:padding="12dp"
+                android:text="24/09/2026"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- Campo: Horario -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Horario"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etHorarioEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#FAFAFA"
+                android:hint="Ej. 09:00 - 15:00"
+                android:padding="12dp"
+                android:text="09:00 – 15:00"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- Campo: Descripción -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Descripción"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etDescripcionEvento"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="6dp"
+                android:background="#FAFAFA"
+                android:gravity="top|start"
+                android:hint="Escribe detalles del evento..."
+                android:padding="12dp"
+                android:text="Salida en autobús desde el centro. Autorización firmada por las familias."
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Botón 1: Guardar evento -->
+        <Button
+            android:id="@+id/btnGuardarEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#A3C9A8"
+            android:padding="14dp"
+            android:text="Guardar evento"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Botón 2: Eliminar evento -->
+        <TextView
+            android:id="@+id/btnEliminarEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:text="Eliminar evento"
+            android:textColor="#D32F2F"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Círculo Verde con Icono de Check -->
+    <TextView
+        android:id="@+id/tvIconoCheck"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="#22C55E"
+        android:gravity="center"
+        android:text="✓"
+        android:textColor="@android:color/white"
+        android:textSize="80sp"
+        android:textStyle="bold" />
+
+    <!-- Título Principal -->
+    <TextView
+        android:id="@+id/tvTituloConfirmacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Se ha vinculado el alumno\ncorrectamente."
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Subtítulo / Instrucción -->
+    <TextView
+        android:id="@+id/tvSubtituloConfirmacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Comprueba el listado de alumnos de la clase\nasignada."
+        android:textColor="#616161"
+        android:textSize="14sp" />
+
+</LinearLayout>
