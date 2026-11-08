@@ -29,6 +29,6 @@ public class SplashScreen extends AppCompatActivity {
         // TODO SERVICIOS
         Intent login = new Intent(SplashScreen.this, LoginActivity.class);
         startActivity(login);
-        finish();
+
     }
 }

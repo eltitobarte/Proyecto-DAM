@@ -17,6 +17,7 @@
     <string name="forgot_label_mail">Mail</string>
     <string name="forgot_hint_mail">Introduzca su correo electrónico</string>
     <string name="forgot_button">Enviar</string>
+    <string name="forgot_error_mail">Introduce un correo electrónico</string>
 
     <!-- ===== Confirmación de envío ===== -->
     <string name="sent_message_1">Se ha enviado un correo a su dirección para restablecer su contraseña correctamente.</string>
