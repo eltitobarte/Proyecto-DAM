@@ -16,8 +16,8 @@ import dam.proyecto.gestionguarderia.services.responses.TestResponse;
  */
 public class ApiServiceMock implements ApiTest {
 
-    private Context ctx;
-    private static Gson gson;
+    private final Context ctx;
+    private final Gson gson;
     public ApiServiceMock(Context ctx) {
         this.ctx = ctx;
         this.gson = new Gson();
@@ -53,7 +53,7 @@ public class ApiServiceMock implements ApiTest {
     @Override
     public boolean getTest() {
         // Llamamos al método genérico indicando qué archivo y qué clase queremos
-        TestResponse data = GET("text.json", TestResponse.class);
+        TestResponse data = GET("test.json", TestResponse.class);
         // Retornamos el valor, controlando que no sea nulo
         return data != null && data.response;
     }

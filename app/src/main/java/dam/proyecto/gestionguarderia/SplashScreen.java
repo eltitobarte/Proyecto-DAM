@@ -1,5 +1,6 @@
 package dam.proyecto.gestionguarderia;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -26,5 +27,8 @@ public class SplashScreen extends AppCompatActivity {
         });
 
         // TODO SERVICIOS
+        Intent login = new Intent(SplashScreen.this, LoginActivity.class);
+        startActivity(login);
+        finish();
     }
 }
