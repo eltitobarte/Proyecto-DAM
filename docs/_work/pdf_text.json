@@ -1,0 +1,79 @@
+[
+  {
+    "page": 1,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "BANCO DE PRUEBAS\nPRUEBA DE INTEGRACIÓN\n1. Descripción\nEn este documento se detalla la especificación de los casos de prueba integrales diseñados y \nverificados para el proyecto GuarderíaApp. Estas pruebas tienen como objetivo validar la \npersistencia de datos, la integridad referencial relacional de MariaDB y el correcto funcionamiento \nde las entidades a través de EntityManager de Doctrine ORM utilizando Symfony KernelTestCase.\nFramework de pruebas\nSymonfy KernelTestCase + PHPUnit \n13.1.8 (PHP 8.5)\nGestor de BBDD & ORM\nMariaDB (XAMP) + Doctrine ORM\nBase de datos de Test\nguarderiaapp_bbdd_test (Asilamiento \ntransaccional)\nMecanismo de Aislamiento\nDAMA DoctrineTestBundle / \nTransactional rollback\n2. Primera Instancia (Mock de Alumno):\nSe instancia un objeto de tipo Alumno para validar que este registro se creó correctamente en la \nbase de datos, que los apellidos del alumno se guardaron y por último validar la que la relación \nentre las entidades Alumno y Aula funciona adecuadamente.\nArchivo de Test\n AlumnosRepositoryIntegrationTest.php\nDescripción\nValidar la persistencia de la entidad \nAlumnos exigiendo la instanciación y \nenlace de cuatro relaciones obligatorias y \nla navegación cruzada de asociaciones \nORM\nCondiciones de ejecución\n•\nServicio MariaDB activo en XAMPP\n•\nBase de datos de prueba \n‘guarderiaapp_bbdd_test’ creada y \nmigraciones ejecutadas\n•\nInstanciación previa de las entidades \nasociadas: Aula, TutorLegal, \nRegistroDiario y Comida\n"
+  },
+  {
+    "page": 2,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "•\nKernel de Symfony en modo test\nDatos de entrada\n•\nAula: nombre = ‘Aula Cuna’\n•\nTutorLegal: nombre = ‘María’, apellidos \n= ‘López Pérez’\n•\nRegistroDiario: fecha = new DateTime()\n•\nComida: fecha = new DateTime()\n•\nAlumnos: nombre = ‘Carlos’ , apellidos= \n‘Gómez Pérez’, fechaNacimiento = \n‘2023-05-10’\n•\nRelaciones asignadas: \nsetAulaCodigo($aula), \nsetTutorLegalCodigo($tutor), \nsetTiene($registro), setRecibe($comida)\nResultado esperado y aserciones\n•\nPersistencia de todas las entidades \nrelacionadas y del alu,mno mediante \n$em→ flush() sin excepciones por valores \nnulos o de clave foránea.\n•\nRecuperación exitosa por nombre \n(‘Carlos’) a través de AlumnosRepository\n•\nNavegación cruzada existosa con \ngetAulaCodigo() → getAulaNombre() \ndevuelve ‘Aula Cuna’\n•\nResultado global del test: OK (1 test, 3 \nassertions)\n"
+  },
+  {
+    "page": 3,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": ""
+  },
+  {
+    "page": 4,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "3. Segunda Instancia (Mock de Aula):\nSe instancia un objeto de tipo Aula para valorar que la consulta a la base de datos devuelve un \nresultado y que el nombre recuperado coincide con el que se insertó previamente.\nArchivo de Test\n AulaRepositoryIntegrationTest.php\nDescripción\nVerificar la instanciación, mapeo ORM, \npersistencia SQL (INSERT) y \nrecuperación mediante repositorio \n(SELECT findOneBY) para la entidad \nAula\nCondiciones de ejecución\n•\nServicio MariaDB activo en XAMPP\n•\nBase de datos de prueba \n‘guarderiaapp_bbdd_test’ creada y \nmigraciones ejecutadas\n•\nKernel de Symfony en modo test\nDatos de entrada\n•\nEntidad: Aula\n•\nPropiedad: ‘aulaNombre’ = ‘Matemáticas \nAvanzadas’\nResultado esperado y aserciones\n•\nEjecución exitosa de $em→persist() y \n$em→flush()\n•\nConsulta $respository→ \nfindOneBy([‘aulaNombre’=>’Matemática\ns Avanzadas’]) no devuelve nulo \n(assertNotNull)\n•\nEl valor recuperado de getAulaNombre() \ncoincide exactamente con ‘Matemáticas \nAvanzadas’\n•\nResultado global del test: OK (1 test, 2 \nassertions)\n"
+  },
+  {
+    "page": 5,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "4. Tercera Instancia (Mock de Usuarios):\nSe instancia un objeto de tipo Usuarios para validar que se creó correctamente el objeto en la base \nde datos y que el valor recogido coincide con el rol y el e-mail insertados.\nArchivo de Test\n UsuariosRepositoryIntegrationTest.php\nDescripción\nVerificar la persistencia y consulta de \nusuarios dentro del sistema de \nautenticación/ acceso\nCondiciones de ejecución\n•\nServicio MariaDB activo en XAMPP\n•\nBase de datos de prueba \n‘guarderiaapp_bbdd_test’ creada y \nmigraciones ejecutadas\n•\nKernel de Symfony en modo test\nDatos de entrada\n•\nEntidad: Usuarios\n•\nPropiedad: ‘rol’ = ‘ROLE_ADMIN’, \n‘contrasenya’ = ‘12345678’, \n‘correoElectronico’ = \n‘admin@guarderia.com’\nResultado esperado y aserciones\n•\nPersistencia y confirmación (flush) \nsatisfactorias\n•\nObjeto devuelto por el repositorio (not \nnull)\n•\nCoincidencia exacta de los atributos \nrecuperados\n•\nResultado global del test: OK (1 test, 3 \nassertions)\n"
+  },
+  {
+    "page": 6,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "5. Cuarta Instancia (Mock de Incidencias):\nSe instancia un objeto del tipo Incidencias para validar la correcta creación del objeto, así como que \nel código insertado en la base de datos coincida con el que recoge el test.\nArchivo de Test\nIncidenciasRepositoryIntegrationTest.php\nDescripción\nValidar el flujo de persistencia y consulta \ndel repositorio para la gestión de \nincidencias del centro\n"
+  },
+  {
+    "page": 7,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "Condiciones de ejecución\n•\nServicio MariaDB activo en XAMPP\n•\nBase de datos de prueba \n‘guarderiaapp_bbdd_test’ creada y \nmigraciones ejecutadas\n•\nKernel de Symfony en modo test\nDatos de entrada\n•\nEntidad: Incidencias\n•\nPropiedad: ‘incidencia’ = ‘Retraso en la \nrecogida, ‘registroCodigo’ = ‘10’\nResultado esperado y aserciones\n•\nPersistencia y confirmación (flush) \nsatisfactorias\n•\nObjeto devuelto por el repositorio (not \nnull)\n•\nCoincidencia exacta de los atributos \nrecuperados\n•\nResultado global del test: OK (1 test, 2 \nassertions)\n"
+  },
+  {
+    "page": 8,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "Todas las pruebas de integración se sucedieron de manera satisfactoria, indicando una adecuada \npersistencia en la base de datos y sus relaciones.\nPRUEBAS DE RENDIMIENTO\nA continuación se establece la especificación técnica del banco de pruebas de rendimiento y \nconcurrencia desarrollado en Apache Jmeter para GuarderiaApp. El test simula un escenario de \nestrés recolectando métricas clave de latencia y tasa de error frente a un volumen constante de 200 \nhilos (usuarios virtuales) conectados simultáneamente a la infraestructura local (localhost).\n"
+  },
+  {
+    "page": 9,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "Herramienta de carga\nApache Jmeter\nServidor de destino\nLocalhost → XAMPP Apache\nVolumen de concurrencia\nThread Group de 200 hilos simultáneos\nCriterio de aceptación de latencia\nTiempo medio de respuesta < 2000 ms; \nTasa de error = 0,00%\nMétricas medidas\nSamples, Average, Min, Max, Error %, \nKB/ sec\nEspecificación del caso de prueba de carga\nPlan de prueba\nTest Plan Jmeter : Thread Group (200 Threads, \nRamp-Up 1s)\nDescripción\nSometer al servidor web local a 200 peticiones \nHTTP concurrentes para evaluar la estabilidad y \nla degradación de los tiempos de respuesta bajo \ncarga\nCondiciones de ejecución\n•\nServidor web local activo en localhost \n(127.0.0.1) \n•\nServidor MySQL/ MariaDB en XAMPP\n•\nEscenario de Jmeter configurado con un \nThread Group de 200 usuariosy Ramp-Up \nperiod de 1 segundo\n•\nListener “Summary Report” y “View \nResults Tree” para la captura de métricas\nParámetros de entrada\n•\nTarget Host: localhost\n•\nHTTP Request Sampler: \nGET/phpmyadmin/index.php?route=/data\nbase/structure&db=guarderiaapp_bbdd_te\nst\n•\nNumber of Threads: 200\n•\nRamp-Up Period: 1\n•\nLoop Count: 1\nResultados esperados\n•\nMuestras procesadas: 200\n•\nPorcentaje de error: 0.00%\n•\nLatencia media: 4000 ms\n•\nTiempo de respuesta medio: 5s\n"
+  },
+  {
+    "page": 10,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": ""
+  },
+  {
+    "page": 11,
+    "w": 595.303955078125,
+    "h": 841.8897705078125,
+    "images": 11,
+    "text": "La prueba de rendimiento evidenció lo siguiente:\n- Una tasa de error del 0%\n- Un tiempo de respuesta medio de 6,2 segundos.\n- Una desviación estándar de 1735,17 ms, una variabilidad notable de una petición a otra\n- Tamaño promedio de respuesta de 171 KB\n- Ancho de banda recibido de 3,8 MB/s. Esto explica en parte los tiempos de respuesta elevados.\n"
+  }
+]
