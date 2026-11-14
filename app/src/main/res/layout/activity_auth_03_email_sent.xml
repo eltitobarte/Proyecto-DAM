@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Pantalla de confirmación de envío de correo.
+
+    Contenido centrado:
+      - Icono circular de confirmación.
+      - Mensaje principal (24sp, negrita).
+      - Mensaje secundario (15sp).
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_screen"
+    android:fillViewport="true"
+    tools:context=".EmailSentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- ===================== 1. CÍRCULO VERDE ===================== -->
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="257dp"
+            android:layout_height="257dp"
+            android:layout_marginTop="115dp"
+            android:contentDescription="@null"
+            android:src="@drawable/check_circle" />
+
+        <!-- ===================== 2. MENSAJE PRINCIPAL ===================== -->
+        <TextView
+            android:id="@+id/tvMessage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/sent_message_1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- ===================== 3. MENSAJE SECUNDARIO ===================== -->
+        <TextView
+            android:id="@+id/tvMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/sent_message_2"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</ScrollView>

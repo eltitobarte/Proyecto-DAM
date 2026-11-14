@@ -1,3 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gestion Guarderia</string>
+
+    <!-- ===== Login ===== -->
+    <string name="login_label_user">User</string>
+    <string name="login_hint_user">Introduzca su usuario</string>
+    <string name="login_label_pwd">Pwd</string>
+    <string name="login_hint_pwd">Introduzca su contraseña</string>
+    <string name="login_remember">Recordar contraseña</string>
+    <string name="login_forgot">¿Has olvidado tu contraseña?</string>
+    <string name="login_button">Acceder</string>
+    <string name="cd_clear">Borrar</string>
+
+    <!-- ===== Recuperar contraseña ===== -->
+    <string name="forgot_title">Introduzca su correo electrónico para recuperar su contraseña:</string>
+    <string name="forgot_label_mail">Mail</string>
+    <string name="forgot_hint_mail">Introduzca su correo electrónico</string>
+    <string name="forgot_button">Enviar</string>
+    <string name="forgot_error_mail">Introduce un correo electrónico</string>
+
+    <!-- ===== Confirmación de envío ===== -->
+    <string name="sent_message_1">Se ha enviado un correo a su dirección para restablecer su contraseña correctamente.</string>
+    <string name="sent_message_2">Comprueba la bandeja de su correo electrónico.\n\nEspere unos segundos y será redirigido a la pantalla de acceso.</string>
+
+    <!-- ===== Inicio (Familia) ===== -->
+    <string name="home_title">Inicio</string>
+    <string name="home_child_name">Nombre del niño</string>
+    <string name="home_child_class">Clase “La Ranita”</string>
+    <string name="home_avatar_initial">A</string>
+
+    <!-- Baby (listado) -->
+    <string name="baby_title">Baby</string>
+    <string name="baby_heading">Mis babies:</string>
+    <string name="baby_child_1">Hijo 1</string>
+    <string name="baby_child_2">Hijo 2</string>
+    <string name="cd_open_child">Abrir ficha del niño</string>
+
+    <!-- Diario del niño -->
+    <string name="diary_title">Hijo 1</string>
+    <string name="diary_heading">Hijo 1 - (Nombre)</string>
+    <string name="diary_notif_title">Notificaciones relevantes:</string>
+    <string name="diary_notif_text">Aquí aparecen indicaciones relevantes sobre el niño en caso de necesidad.</string>
+    <string name="diary_status">Estado general del bebé:</string>
+    <string name="diary_mood">Estoy así\n(Ánimo)</string>
+    <string name="diary_food">¿He comido\nbien?</string>
+    <string name="diary_sleep">¿He\ndormido?</string>
+    <string name="diary_health">¿Y mis pises y\ncacas?</string>
+    <string name="cd_diary_mood">Ánimo</string>
+    <string name="cd_diary_food">Comida</string>
+    <string name="cd_diary_sleep">Siesta</string>
+    <string name="cd_diary_health">Pises y cacas</string>
+
+    <!-- Chat (listado) -->
+    <string name="chat_title">Chat</string>
+    <string name="chat_heading">Mis babies:</string>
+    <string name="chat_child_1">Hijo 1 - Clase Ranita</string>
+    <string name="chat_child_2">Hijo 2 - Clase Cebra</string>
+    <string name="cd_open_chat">Abrir conversación</string>
+
+    <!-- Chat (individual) -->
+    <string name="chat_detail_message_1">Hola papi de ‘Nombre’ de la clase ‘Ranita’. Te recuerdo que nos quedan 3 pañales para poder hacer el cambio de estos. Recuerda traer más mañana.\n\n¡Gracias!</string>
+    <string name="chat_detail_message_2">Hola ‘Profe’ gracias por informarme. Mañana mismo llevo los pañales.</string>
+    <string name="chat_input_hint">Escribe tu mensaje por aquí...</string>
+    <string name="cd_back">Volver</string>
+    <string name="cd_send">Enviar mensaje</string>
+    <string name="cd_attach_image">Adjuntar imagen</string>
+    <string name="cd_code">Adjuntar código</string>
+    <string name="cd_mic">Grabar audio</string>
+
+    <!-- Tablón de avisos -->
+    <string name="advices_heading">Panel de notificaciones</string>
+    <string name="advices_critical_title"><u>IMPORTANTE - BROTE DE VARICELA</u></string>
+    <string name="advices_critical_date">11 de julio de 2026</string>
+    <string name="advices_critical_body">Pedimos a todos los padres que NO HAN VACUNADO a sus hijos que no vengan a la escuela por varios casos de la enfermedad descrita al inicio de la notificación. Si desean más información pónganse en contacto con nosotros por los canales habituales.</string>
+    <string name="advices_warning_title"><u>Justificante para excursión - Clase CEBRA</u></string>
+    <string name="advices_warning_date">17 de julio de 2026</string>
+    <string name="advices_warning_body">Rogamos a todos los padres que tengan hijos en la clase CEBRA que recuerden traer ANTES DEL 24 DE JULIO el justificante que nos permite realizar la excursión con sus hijos. Cualquier duda, contacten con el profesoresado.\nSaludos, Roberto (Profe de los CEBRAS)</string>
+    <string name="advices_reminder_title"><u>Recordatorio - Acceso al centro educativo</u></string>
+    <string name="advices_reminder_date">19 de julio de 2026</string>
+    <string name="advices_reminder_body">Recordamos a todos los padres, madres y tutores legales que accedan con sus peques con todas las necesidades que este requiera en su mochila para facilitar la búsqueda y organización de las aulas y el centro en general, así como una pronta búsqueda de material en caso de necesidad.</string>
+
+    <!-- Comida -->
+    <string name="food_title">Comida / Comedor</string>
+    <string name="food_week_title">Navegador semanal</string>
+    <string name="food_prev_month">‹</string>
+    <string name="food_next_month">›</string>
+    <string name="food_month">Septiembre 2026</string>
+    <string name="food_week_1">Semana 1</string>
+    <string name="food_week_2">Semana 2</string>
+    <string name="food_week_3">Semana 3</string>
+    <string name="food_week_4">Semana 4</string>
+    <string name="food_week_hint">Toca la semana del mes para ver su menú.</string>
+    <string name="food_menu_title">Menú del día</string>
+    <string name="food_day">Lunes · 15 de septiembre</string>
+    <string name="food_course_1">Primer plato</string>
+    <string name="food_course_2">Segundo plato</string>
+    <string name="food_course_3">Guarnición</string>
+    <string name="food_course_4">Postre</string>
+    <string name="food_dish_1">Crema de calabaza</string>
+    <string name="food_dish_2">Merluza a la plancha</string>
+    <string name="food_dish_3">Ensalada verde</string>
+    <string name="food_dish_4">Fruta de temporada</string>
+    <string name="food_menu_note">Menú sujeto a cambios. Ante cualquier duda, contacta con el centro.</string>
+    <string name="food_allergen_title">Alérgenos</string>
+    <string name="food_allergen_g">G</string>
+    <string name="food_allergen_l">L</string>
+    <string name="food_allergen_f">F</string>
+    <string name="food_allergen_gluten">Gluten</string>
+    <string name="food_allergen_lactose">Lactosa</string>
+    <string name="food_allergen_nuts">Frutos secos</string>
+    <string name="food_allergen_note">Los platos que contengan alérgenos mostrarán su icono junto al nombre.</string>
+
+    <!-- Perfil / Ajustes -->
+    <string name="profile_title">Perfil / Ajustes</string>
+    <string name="profile_minors">Gestión de menores</string>
+    <string name="profile_expand">⌄</string>
+    <string name="profile_child_1">Hijo 1 · Nombre</string>
+    <string name="profile_child_2">Hijo 2 · Nombre</string>
+    <string name="profile_class_1">Clase “La Ranita”</string>
+    <string name="profile_class_2">Clase “CEBRA”</string>
+    <string name="profile_minors_hint">Toca la tarjeta para gestionar la ficha de cada hijo.</string>
+    <string name="profile_health">Salud y alergias</string>
+    <string name="profile_chip_1">Intolerancia a la lactosa</string>
+    <string name="profile_chip_2">Alergia al huevo</string>
+    <string name="profile_add_tag">+ Añadir etiqueta</string>
+    <string name="profile_health_hint">Intolerancias y observaciones alimentarias editables de cada menor.</string>
+    <string name="profile_security">Seguridad</string>
+    <string name="profile_change_password">Cambiar contraseña</string>
+    <string name="profile_logout">Cerrar sesión</string>
+
+    <!-- Ficha del menor -->
+    <string name="child_title">Ficha del menor</string>
+    <string name="child_avatar_letter">L</string>
+    <string name="child_name">Lucas García</string>
+    <string name="child_class">Clase “La Ranita”</string>
+    <string name="child_data_title">Datos generales del baby</string>
+    <string name="child_card_label">Nº tarjeta sanitaria / seguro</string>
+    <string name="child_card_value">ES-2800-123456-78</string>
+    <string name="child_pediatrician_label">Pediatra asignado</string>
+    <string name="child_pediatrician_value">Dra. Laura Méndez · 91 234 56 78</string>
+    <string name="child_tutors_label">Padres / Madres / Tutores</string>
+    <string name="child_tutor_1">María López · +34 600 111 222</string>
+    <string name="child_tutor_2">Carlos García · +34 600 333 444</string>
+    <string name="child_edit">Editar datos</string>
+    <string name="child_save">Guardar Cambios</string>
+    <string name="child_cancel">Cancelar</string>
+
+    <!-- Salud, alergias y dietas -->
+    <string name="health_title">Editar ficha médica</string>
+    <string name="health_category">Categoría</string>
+    <string name="health_category_1">Alergia alimentaria</string>
+    <string name="health_category_2">Intolerancia</string>
+    <string name="health_category_3">Medicación diaria</string>
+    <string name="health_category_4">Observación</string>
+    <string name="health_detail_title">Detalle de la etiqueta</string>
+    <string name="health_ingredient_label">Ingrediente o afección</string>
+    <string name="health_ingredient_value">Celiacos / Gluten</string>
+    <string name="health_protocol_label">Protocolo de actuación</string>
+    <string name="health_protocol_value">En caso de ingesta accidental, administrar el antihistamínico de la mochila y avisar a la familia.</string>
+    <string name="health_save">Guardar Etiqueta</string>
+    <string name="health_delete">Eliminar</string>
+    <string name="health_cancel">Cancelar</string>
+
+    <!-- Cambiar contraseña -->
+    <string name="password_title">Seguridad de la cuenta</string>
+    <string name="password_form">Formulario</string>
+    <string name="password_current">Contraseña actual</string>
+    <string name="password_current_value">••••••••</string>
+    <string name="password_show">Mostrar</string>
+    <string name="password_new">Nueva contraseña</string>
+    <string name="password_new_hint">Introduce tu nueva contraseña</string>
+    <string name="password_confirm">Confirmar nueva contraseña</string>
+    <string name="password_confirm_hint">Repite tu nueva contraseña</string>
+    <string name="password_requirements">Requisitos de seguridad</string>
+    <string name="password_check">✓</string>
+    <string name="password_req_1">Mínimo 8 caracteres</string>
+    <string name="password_req_2">Al menos 1 número</string>
+    <string name="password_req_3">Al menos 1 mayúscula</string>
+    <string name="password_req_4">Al menos 1 símbolo</string>
+    <string name="password_requirements_note">Los indicadores pasan de gris a verde en tiempo real.</string>
+    <string name="password_update">Actualizar Contraseña</string>
+    <string name="password_update_note">Se activará cuando la contraseña cumpla todos los requisitos.</string>
+    <string name="password_cancel">Cancelar</string>
+
+    <!-- Diálogo de cerrar sesión -->
+    <string name="logout_warning_sign">!</string>
+    <string name="logout_title">¿Cerrar sesión en este dispositivo?</string>
+    <string name="logout_body">Tendrás que volver a introducir tus credenciales para recibir avisos de tu hijo.</string>
+    <string name="logout_cancel">Cancelar</string>
+    <string name="logout_confirm">Cerrar Sesión</string>
+
+    <!-- Calendario -->
+    <string name="calendar_title">Calendario</string>
+    <string name="calendar_day_title">Eventos del día</string>
+    <string name="calendar_empty">No hay eventos para este día.</string>
+
+    <!-- Descripciones de los iconos (accesibilidad) -->
+    <string name="cd_menu">Menú</string>
+    <string name="cd_profile">Perfil</string>
+    <string name="cd_baby">Baby</string>
+    <string name="cd_chat">Chat</string>
+    <string name="cd_notices">Avisos</string>
+    <string name="cd_calendar">Calendario</string>
+    <string name="cd_food">Comida</string>
 </resources>

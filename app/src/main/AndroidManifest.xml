@@ -21,7 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".EmailSentActivity"
             android:exported="false"/>
     </application>
 
