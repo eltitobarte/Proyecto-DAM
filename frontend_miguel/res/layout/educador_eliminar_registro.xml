@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Tarjeta del Diálogo Modal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Círculo Icono Papelera -->
+        <TextView
+            android:id="@+id/tvIconoPapelera"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#FDE8E8"
+            android:gravity="center"
+            android:text="🗑"
+            android:textColor="#C62828"
+            android:textSize="24sp" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTituloEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="¿Eliminar este registro?"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Mensaje de Advertencia -->
+        <TextView
+            android:id="@+id/tvMensajeEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Se borrarán los datos no guardados\n(siesta, biberón y pañales) de Lucas García."
+            android:textColor="#757575"
+            android:textSize="13sp" />
+
+        <!-- Botón 1: Sí, eliminar cambios -->
+        <Button
+            android:id="@+id/btnEliminarCambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#B71C1C"
+            android:padding="12dp"
+            android:text="Sí, eliminar cambios"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Botón 2: Volver al registro -->
+        <Button
+            android:id="@+id/btnVolverRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:padding="12dp"
+            android:text="Volver al registro"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@android:color/white"
+    android:elevation="1dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Círculo con Inicial -->
+    <TextView
+        android:id="@+id/tvInicialAlumno"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#B2DFDB"
+        android:gravity="center"
+        android:text="L"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Nombre Alumno -->
+    <TextView
+        android:id="@+id/tvNombreAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lucas G."
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Estado (Completado / Pendiente) -->
+    <TextView
+        android:id="@+id/tvEstadoAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="#E0E0E0"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="Pendiente"
+        android:textColor="#616161"
+        android:textSize="11sp" />
+
+</LinearLayout>
