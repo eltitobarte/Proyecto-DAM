@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,10 +36,10 @@ public class PMTProfileActivity extends AppCompatActivity {
         findViewById(R.id.rowChild1).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
         findViewById(R.id.rowChild2).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
 
-        // TODO: salud/alergias y cambiar contraseña todavía no tienen pantalla
-        findViewById(R.id.cardHealth).setOnClickListener(v -> avisoProximamente());
-        findViewById(R.id.cardSecurity).setOnClickListener(v -> avisoProximamente());
-        findViewById(R.id.btnChangePassword).setOnClickListener(v -> avisoProximamente());
+        // Salud y contraseña ya tienen su pantalla
+        findViewById(R.id.cardHealth).setOnClickListener(v -> startActivity(new Intent(this, PMTHealthActivity.class)));
+        findViewById(R.id.cardSecurity).setOnClickListener(v -> startActivity(new Intent(this, PMTPasswordActivity.class)));
+        findViewById(R.id.btnChangePassword).setOnClickListener(v -> startActivity(new Intent(this, PMTPasswordActivity.class)));
 
         // Cierre de sesión: primero preguntamos con el diálogo del diseño
         findViewById(R.id.btnLogout).setOnClickListener(v -> preguntarCerrarSesion());
@@ -83,9 +82,5 @@ public class PMTProfileActivity extends AppCompatActivity {
         login.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(login);
         finish();
-    }
-
-    private void avisoProximamente() {
-        Toast.makeText(this, R.string.comun_proximamente, Toast.LENGTH_SHORT).show();
     }
 }

@@ -58,6 +58,12 @@
         <activity
             android:name=".PMTChatDetailActivity"
             android:exported="false" />
+        <activity
+            android:name=".PMTHealthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PMTPasswordActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

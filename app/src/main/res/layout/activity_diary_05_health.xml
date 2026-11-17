@@ -11,11 +11,14 @@
              └─ botones de guardar, eliminar y cancelar
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_screen"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".PMTHealthActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +42,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:id="@+id/ivMenu"
                 android:contentDescription="@string/cd_menu"
                 android:padding="12dp"
                 android:src="@drawable/ic_menu_24"
@@ -56,6 +60,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:id="@+id/ivProfile"
                 android:contentDescription="@string/cd_profile"
                 android:padding="12dp"
                 android:src="@drawable/ic_person_24"
@@ -91,6 +96,7 @@
 
                 <!-- Alergia alimentaria (seleccionada) -->
                 <LinearLayout
+                    android:id="@+id/rowCat1"
                     android:layout_width="match_parent"
                     android:layout_height="18dp"
                     android:layout_marginTop="12dp"
@@ -98,11 +104,13 @@
                     android:orientation="horizontal">
 
                     <View
+                        android:id="@+id/radio1"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
-                        android:background="@drawable/bg_radio_on" />
+                        android:background="@drawable/bg_radio_off" />
 
-                    <TextView
+<TextView
+                        android:id="@+id/label1"
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:layout_marginStart="10dp"
@@ -114,6 +122,7 @@
 
                 <!-- Intolerancia -->
                 <LinearLayout
+                    android:id="@+id/rowCat2"
                     android:layout_width="match_parent"
                     android:layout_height="18dp"
                     android:layout_marginTop="12dp"
@@ -121,11 +130,13 @@
                     android:orientation="horizontal">
 
                     <View
+                        android:id="@+id/radio2"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:background="@drawable/bg_radio_off" />
 
-                    <TextView
+<TextView
+                        android:id="@+id/label2"
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:layout_marginStart="10dp"
@@ -137,6 +148,7 @@
 
                 <!-- Medicación diaria -->
                 <LinearLayout
+                    android:id="@+id/rowCat3"
                     android:layout_width="match_parent"
                     android:layout_height="18dp"
                     android:layout_marginTop="12dp"
@@ -144,11 +156,13 @@
                     android:orientation="horizontal">
 
                     <View
+                        android:id="@+id/radio3"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:background="@drawable/bg_radio_off" />
 
-                    <TextView
+<TextView
+                        android:id="@+id/label3"
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:layout_marginStart="10dp"
@@ -160,6 +174,7 @@
 
                 <!-- Observación -->
                 <LinearLayout
+                    android:id="@+id/rowCat4"
                     android:layout_width="match_parent"
                     android:layout_height="18dp"
                     android:layout_marginTop="12dp"
@@ -167,11 +182,13 @@
                     android:orientation="horizontal">
 
                     <View
+                        android:id="@+id/radio4"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:background="@drawable/bg_radio_off" />
 
-                    <TextView
+<TextView
+                        android:id="@+id/label4"
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:layout_marginStart="10dp"

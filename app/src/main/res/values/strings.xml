@@ -176,6 +176,7 @@
     <string name="password_current">Contraseña actual</string>
     <string name="password_current_value">••••••••</string>
     <string name="password_show">Mostrar</string>
+    <string name="password_hide">Ocultar</string>
     <string name="password_new">Nueva contraseña</string>
     <string name="password_new_hint">Introduce tu nueva contraseña</string>
     <string name="password_confirm">Confirmar nueva contraseña</string>
@@ -190,6 +191,9 @@
     <string name="password_update">Actualizar Contraseña</string>
     <string name="password_update_note">Se activará cuando la contraseña cumpla todos los requisitos.</string>
     <string name="password_cancel">Cancelar</string>
+    <string name="password_updated">Contraseña actualizada</string>
+    <string name="health_saved">Etiqueta guardada</string>
+    <string name="health_deleted">Etiqueta eliminada</string>
 
     <!-- Diálogo de cerrar sesión -->
     <string name="logout_warning_sign">!</string>
