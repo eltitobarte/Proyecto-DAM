@@ -46,6 +46,12 @@
         <activity
             android:name=".PMTProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".PMTCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PMTFoodActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

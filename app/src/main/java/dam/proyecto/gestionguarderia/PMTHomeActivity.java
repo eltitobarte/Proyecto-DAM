@@ -42,9 +42,9 @@ public class PMTHomeActivity extends AppCompatActivity {
         findViewById(R.id.cardNotices).setOnClickListener(v -> abrir(PMTAdvicesActivity.class));
         findViewById(R.id.cardProfile).setOnClickListener(v -> abrir(PMTProfileActivity.class));
 
-        // Calendario y comedor: sus layouts ya existen, pero todavía no tienen Activity
-        findViewById(R.id.cardCalendar).setOnClickListener(v -> avisoProximamente());
-        findViewById(R.id.cardFood).setOnClickListener(v -> avisoProximamente());
+        // Calendario y comedor ya tienen su pantalla
+        findViewById(R.id.cardCalendar).setOnClickListener(v -> abrir(PMTCalendarActivity.class));
+        findViewById(R.id.cardFood).setOnClickListener(v -> abrir(PMTFoodActivity.class));
     }
 
     /** Abre otra pantalla. */

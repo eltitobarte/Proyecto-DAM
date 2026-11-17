@@ -11,11 +11,14 @@
              └─ tarjeta de alérgenos
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_screen"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".PMTFoodActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +42,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:id="@+id/ivMenu"
                 android:contentDescription="@string/cd_menu"
                 android:padding="12dp"
                 android:src="@drawable/ic_menu_24"
@@ -56,6 +60,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:id="@+id/ivProfile"
                 android:contentDescription="@string/cd_profile"
                 android:padding="12dp"
                 android:src="@drawable/ic_person_24"

@@ -1,7 +1,9 @@
 package dam.proyecto.gestionguarderia;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -41,9 +43,37 @@ public class PMTProfileActivity extends AppCompatActivity {
         findViewById(R.id.cardSecurity).setOnClickListener(v -> avisoProximamente());
         findViewById(R.id.btnChangePassword).setOnClickListener(v -> avisoProximamente());
 
-        // Cierre de sesión: se limpia la sesión guardada y se vuelve al login
-        // TODO Pantalla de confirmación (activity_profile_03_logout_confirm) antes de salir
-        findViewById(R.id.btnLogout).setOnClickListener(v -> cerrarSesion());
+        // Cierre de sesión: primero preguntamos con el diálogo del diseño
+        findViewById(R.id.btnLogout).setOnClickListener(v -> preguntarCerrarSesion());
+    }
+
+    /**
+     * Saca el diálogo de "¿seguro que quieres cerrar sesión?".
+     * El diseño ya estaba hecho (activity_profile_03_logout_confirm),
+     * así que lo usamos dentro de un Dialog normal.
+     */
+    private void preguntarCerrarSesion() {
+        Dialog dialogo = new Dialog(this);
+        dialogo.setContentView(R.layout.activity_profile_03_logout_confirm);
+
+        // Sin esto el diálogo sale muy estrecho y se cortan los botones:
+        // le decimos que ocupe el ancho de la pantalla y quitamos su fondo,
+        // porque el fondo blanco ya lo pone la tarjeta del layout.
+        if (dialogo.getWindow() != null) {
+            dialogo.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialogo.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
+
+        // Cancelar: solo cierra el diálogo y nos quedamos donde estamos
+        dialogo.findViewById(R.id.btnCancel).setOnClickListener(v -> dialogo.dismiss());
+
+        // Cerrar sesión: borramos lo que teníamos guardado y volvemos al login
+        dialogo.findViewById(R.id.btnConfirm).setOnClickListener(v -> {
+            dialogo.dismiss();
+            cerrarSesion();
+        });
+
+        dialogo.show();
     }
 
     /** Borra los datos de sesión y vuelve al login dejando la pila limpia. */
