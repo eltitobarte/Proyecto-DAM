@@ -80,107 +80,14 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <!-- ===================== 3. FILA HIJO 1 ===================== -->
-        <!-- Toda la fila es "pulsable" (48dp de alto) y lleva id -->
-        <LinearLayout
-            android:id="@+id/rowChild1"
+        <!-- Lista de menores: la rellena el adaptador, ya no hay filas escritas a mano -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaMenores"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="18dp"
-            android:paddingEnd="22dp">
-
-            <!-- Avatar redondo -->
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_avatar"
-                android:contentDescription="@null"
-                android:padding="8dp"
-                android:src="@drawable/ic_person_24"
-                app:tint="@color/avatar_text" />
-
-            <!-- Nombre. weight=1 para empujar la flecha a la derecha -->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="@string/baby_child_1"
-                android:textColor="@color/on_surface"
-                android:textSize="16sp" />
-
-            <!-- Flecha de "entrar" -->
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/cd_open_child"
-                android:padding="12dp"
-                android:src="@drawable/ic_chevron_right_24"
-                app:tint="@color/tile_dark" />
-        </LinearLayout>
-
-        <!-- Línea separadora -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="22dp"
-            android:background="@color/divider" />
-
-        <!-- ===================== 4. FILA HIJO 2 ===================== -->
-        <LinearLayout
-            android:id="@+id/rowChild2"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="18dp"
-            android:paddingEnd="22dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_avatar"
-                android:contentDescription="@null"
-                android:padding="8dp"
-                android:src="@drawable/ic_person_24"
-                app:tint="@color/avatar_text" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="@string/baby_child_2"
-                android:textColor="@color/on_surface"
-                android:textSize="16sp" />
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/cd_open_child"
-                android:padding="12dp"
-                android:src="@drawable/ic_chevron_right_24"
-                app:tint="@color/tile_dark" />
-        </LinearLayout>
-
-        <!-- Línea separadora final -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="22dp"
-            android:background="@color/divider" />
+            android:clipToPadding="false"
+            android:paddingBottom="16dp" />
 
     </LinearLayout>
 </ScrollView>

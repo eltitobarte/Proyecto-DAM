@@ -64,6 +64,9 @@
         <activity
             android:name=".PMTPasswordActivity"
             android:exported="false" />
+        <activity
+            android:name=".PMTDiaryActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

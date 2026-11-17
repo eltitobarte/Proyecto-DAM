@@ -79,114 +79,14 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <!-- ===================== 3. FILA HIJO 1 ===================== -->
-        <LinearLayout
-            android:id="@+id/rowChild1"
+        <!-- Lista de conversaciones: la rellena el adaptador, ya no hay filas escritas a mano -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaChats"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="18dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <!-- Avatar del niño -->
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_avatar"
-                android:contentDescription="@null"
-                android:padding="8dp"
-                android:src="@drawable/ic_person_24"
-                app:tint="@color/avatar_text" />
-
-            <!-- Nombre y clase. weight=1 para empujar el resto a la derecha -->
-            <TextView
-                android:id="@+id/tvChild1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="@string/chat_child_1"
-                android:textColor="@color/on_surface"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <!-- Aviso de mensajes sin leer -->
-            <View
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_unread" />
-
-            <!-- Flecha de entrar -->
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/cd_open_chat"
-                android:padding="12dp"
-                android:src="@drawable/ic_chevron_right_24"
-                app:tint="@color/tile_dark" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="23dp"
-            android:background="@color/divider" />
-
-        <!-- ===================== 4. FILA HIJO 2 ===================== -->
-        <LinearLayout
-            android:id="@+id/rowChild2"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="18dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_avatar"
-                android:contentDescription="@null"
-                android:padding="8dp"
-                android:src="@drawable/ic_person_24"
-                app:tint="@color/avatar_text" />
-
-            <TextView
-                android:id="@+id/tvChild2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="@string/chat_child_2"
-                android:textColor="@color/on_surface"
-                android:textSize="16sp" />
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:contentDescription="@string/cd_open_chat"
-                android:padding="12dp"
-                android:src="@drawable/ic_chevron_right_24"
-                app:tint="@color/tile_dark" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="23dp"
-            android:background="@color/divider" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp" />
 
     </LinearLayout>
 </ScrollView>

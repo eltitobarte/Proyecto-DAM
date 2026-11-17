@@ -46,6 +46,7 @@
     <!-- Diario del niño -->
     <string name="diary_title">Hijo 1</string>
     <string name="diary_heading">Hijo 1 - (Nombre)</string>
+    <string name="diary_heading_name">Diario de %1$s</string>
     <string name="diary_notif_title">Notificaciones relevantes:</string>
     <string name="diary_notif_text">Aquí aparecen indicaciones relevantes sobre el niño en caso de necesidad.</string>
     <string name="diary_status">Estado general del bebé:</string>
