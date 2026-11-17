@@ -67,11 +67,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Valida el formulario y, si está bien, guarda la sesión y entra al inicio.
-     *
-     * TODO Conexión real: validar contra la API (ApiServiceMock de momento) y guardar el token.
-     */
+    // Mira que los dos campos estén rellenos y, si todo está bien, entra al inicio.
+    // TODO: cuando haya conexión de verdad, esto se comprobará contra la API y se guardará el token.
     private void acceder() {
         String usuario = textoSeguro(etUser);
         String contrasena = textoSeguro(etPassword);
@@ -90,8 +87,8 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        // Sesión de momento local (mock): usuario y rol FAMILY
-        // TODO Recordar contraseña: guardar la preferencia cuando exista la conexión real
+        // De momento guardamos el usuario y el rol a mano, sin servidor
+        // TODO: lo de "recordar contraseña" habrá que guardarlo cuando exista la conexión
         config.setUser(usuario);
         config.setRole("FAMILY");
 
@@ -100,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
-    /** Devuelve el texto del campo sin espacios sobrantes y sin NullPointerException. */
+    // Coge el texto del campo sin espacios y sin petar si está vacío
     private String textoSeguro(TextInputEditText campo) {
         if (campo.getText() == null) {
             return "";

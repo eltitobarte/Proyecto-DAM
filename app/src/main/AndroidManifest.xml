@@ -52,6 +52,12 @@
         <activity
             android:name=".PMTFoodActivity"
             android:exported="false" />
+        <activity
+            android:name=".PMTChildDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PMTChatDetailActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

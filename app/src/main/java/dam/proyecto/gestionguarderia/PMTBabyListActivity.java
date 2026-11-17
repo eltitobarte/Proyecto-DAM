@@ -2,7 +2,6 @@ package dam.proyecto.gestionguarderia;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-/**
- * Listado de menores del perfil familia (Baby).
- */
+// Listado de menores (Baby).
+// Cada fila lleva a la ficha del niño.
 public class PMTBabyListActivity extends AppCompatActivity {
 
     @Override
@@ -26,16 +24,17 @@ public class PMTBabyListActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Barra superior: el icono de menú actúa como "volver" en las pantallas internas
+        // Arriba: el menú hace de "volver" y el muñeco lleva al perfil
         findViewById(R.id.ivMenu).setOnClickListener(v -> finish());
         findViewById(R.id.ivProfile).setOnClickListener(v -> startActivity(new Intent(this, PMTProfileActivity.class)));
 
-        // TODO Diario y ficha del menor: pendientes de su Activity
-        findViewById(R.id.rowChild1).setOnClickListener(v -> avisoProximamente());
-        findViewById(R.id.rowChild2).setOnClickListener(v -> avisoProximamente());
+        // Cada fila abre la ficha de ese menor
+        findViewById(R.id.rowChild1).setOnClickListener(v -> abrirFicha());
+        findViewById(R.id.rowChild2).setOnClickListener(v -> abrirFicha());
     }
 
-    private void avisoProximamente() {
-        Toast.makeText(this, R.string.comun_proximamente, Toast.LENGTH_SHORT).show();
+    // Abre la ficha. De momento siempre la misma, porque los datos están fijos
+    private void abrirFicha() {
+        startActivity(new Intent(this, PMTChildDetailActivity.class));
     }
 }

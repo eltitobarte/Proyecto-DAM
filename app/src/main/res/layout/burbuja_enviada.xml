@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Burbuja de un mensaje enviado.
+    Es la misma que la del diseño, pero en un layout aparte para poder
+    crearla desde Java cada vez que se manda un mensaje nuevo.
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="335dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="61dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_bubble_sent"
+    android:lineSpacingExtra="3dp"
+    android:padding="8dp"
+    android:textSize="16sp" />

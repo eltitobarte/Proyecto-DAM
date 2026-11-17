@@ -23,6 +23,8 @@
 
     <!-- Textos comunes -->
     <string name="comun_proximamente">Pantalla en construcción</string>
+    <string name="child_saved">Datos guardados</string>
+    <string name="chat_empty">Escribe un mensaje primero</string>
 
     <!-- ===== Confirmación de envío ===== -->
     <string name="sent_message_1">Se ha enviado un correo a su dirección para restablecer su contraseña correctamente.</string>

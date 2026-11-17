@@ -2,7 +2,6 @@ package dam.proyecto.gestionguarderia;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-/**
- * Listado de conversaciones del chat del perfil familia.
- */
+// Listado de conversaciones del chat.
+// Cada fila abre la conversación con el profesor.
 public class PMTChatListActivity extends AppCompatActivity {
 
     @Override
@@ -29,12 +27,13 @@ public class PMTChatListActivity extends AppCompatActivity {
         findViewById(R.id.ivMenu).setOnClickListener(v -> finish());
         findViewById(R.id.ivProfile).setOnClickListener(v -> startActivity(new Intent(this, PMTProfileActivity.class)));
 
-        // TODO Conversación (chat_02_detail): pendiente de su Activity
-        findViewById(R.id.rowChild1).setOnClickListener(v -> avisoProximamente());
-        findViewById(R.id.rowChild2).setOnClickListener(v -> avisoProximamente());
+        // Cada fila abre la conversación con el profesor
+        findViewById(R.id.rowChild1).setOnClickListener(v -> abrirConversacion());
+        findViewById(R.id.rowChild2).setOnClickListener(v -> abrirConversacion());
     }
 
-    private void avisoProximamente() {
-        Toast.makeText(this, R.string.comun_proximamente, Toast.LENGTH_SHORT).show();
+    // Abre la conversación. De momento siempre la misma, porque no hay datos
+    private void abrirConversacion() {
+        startActivity(new Intent(this, PMTChatDetailActivity.class));
     }
 }

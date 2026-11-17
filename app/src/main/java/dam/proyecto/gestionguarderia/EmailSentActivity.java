@@ -23,7 +23,7 @@ public class EmailSentActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Espera 3 segundos y vuelve a la pantalla de login
+        // Esperamos 3 segundos y volvemos al login
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

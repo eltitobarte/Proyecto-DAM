@@ -2,7 +2,6 @@ package dam.proyecto.gestionguarderia;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,11 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-/**
- * Pantalla de inicio del perfil familia.
- * Es el centro de navegación: desde aquí se entra a los seis accesos de la rejilla
- * y a los dos iconos de la barra superior.
- */
+// Pantalla de inicio del perfil familia.
+// Desde aquí se llega a todo: las seis tarjetas de la rejilla y los iconos de arriba.
 public class PMTHomeActivity extends AppCompatActivity {
 
     @Override
@@ -29,12 +25,11 @@ public class PMTHomeActivity extends AppCompatActivity {
         });
 
         // --- Barra superior ---
-        // TODO Menú lateral (drawer): pendiente de decidir con el equipo
-        findViewById(R.id.ivMenu).setOnClickListener(v -> avisoProximamente());
+        // TODO: el menú lateral todavía no está hecho, así que el icono no hace nada
         findViewById(R.id.ivProfile).setOnClickListener(v -> abrir(PMTProfileActivity.class));
 
-        // --- Tarjeta del niño: lleva al listado de menores ---
-        findViewById(R.id.cardChild).setOnClickListener(v -> abrir(PMTBabyListActivity.class));
+        // --- Tarjeta del niño: lleva a su ficha ---
+        findViewById(R.id.cardChild).setOnClickListener(v -> abrir(PMTChildDetailActivity.class));
 
         // --- Rejilla de accesos ---
         findViewById(R.id.cardBaby).setOnClickListener(v -> abrir(PMTBabyListActivity.class));
@@ -47,13 +42,8 @@ public class PMTHomeActivity extends AppCompatActivity {
         findViewById(R.id.cardFood).setOnClickListener(v -> abrir(PMTFoodActivity.class));
     }
 
-    /** Abre otra pantalla. */
+    // Abre otra pantalla
     private void abrir(Class<?> destino) {
         startActivity(new Intent(this, destino));
-    }
-
-    /** Aviso temporal para las pantallas que aún no están enganchadas. */
-    private void avisoProximamente() {
-        Toast.makeText(this, R.string.comun_proximamente, Toast.LENGTH_SHORT).show();
     }
 }

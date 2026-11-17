@@ -14,9 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import dam.proyecto.gestionguarderia.services.ConfigApp;
 
-/**
- * Perfil del usuario de familia: menores, salud, seguridad y cierre de sesión.
- */
+// Perfil del usuario de familia.
+// Aquí están los menores, la salud, la seguridad y el cierre de sesión.
 public class PMTProfileActivity extends AppCompatActivity {
 
     @Override
@@ -30,7 +29,7 @@ public class PMTProfileActivity extends AppCompatActivity {
             return insets;
         });
 
-        // En el perfil el icono de menú vuelve atrás; el de perfil no hace nada (ya estamos aquí)
+        // El icono de menú vuelve atrás; el del muñeco no hace nada porque ya estamos en el perfil
         findViewById(R.id.ivMenu).setOnClickListener(v -> finish());
 
         // Menores: lleva al listado de niños
@@ -38,7 +37,7 @@ public class PMTProfileActivity extends AppCompatActivity {
         findViewById(R.id.rowChild1).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
         findViewById(R.id.rowChild2).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
 
-        // TODO Salud/alergias y cambio de contraseña: pendientes de su Activity
+        // TODO: salud/alergias y cambiar contraseña todavía no tienen pantalla
         findViewById(R.id.cardHealth).setOnClickListener(v -> avisoProximamente());
         findViewById(R.id.cardSecurity).setOnClickListener(v -> avisoProximamente());
         findViewById(R.id.btnChangePassword).setOnClickListener(v -> avisoProximamente());
@@ -47,18 +46,15 @@ public class PMTProfileActivity extends AppCompatActivity {
         findViewById(R.id.btnLogout).setOnClickListener(v -> preguntarCerrarSesion());
     }
 
-    /**
-     * Saca el diálogo de "¿seguro que quieres cerrar sesión?".
-     * El diseño ya estaba hecho (activity_profile_03_logout_confirm),
-     * así que lo usamos dentro de un Dialog normal.
-     */
+    // Saca el diálogo de "¿seguro que quieres cerrar sesión?".
+    // El diseño ya estaba hecho (activity_profile_03_logout_confirm), así que lo usamos tal cual.
     private void preguntarCerrarSesion() {
         Dialog dialogo = new Dialog(this);
         dialogo.setContentView(R.layout.activity_profile_03_logout_confirm);
 
-        // Sin esto el diálogo sale muy estrecho y se cortan los botones:
-        // le decimos que ocupe el ancho de la pantalla y quitamos su fondo,
-        // porque el fondo blanco ya lo pone la tarjeta del layout.
+        // Ojo: sin esto el diálogo sale muy estrecho y se cortan los botones.
+        // Le decimos que ocupe el ancho de la pantalla y le quitamos el fondo,
+        // que ya lo pone la tarjeta del layout.
         if (dialogo.getWindow() != null) {
             dialogo.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             dialogo.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
@@ -76,7 +72,7 @@ public class PMTProfileActivity extends AppCompatActivity {
         dialogo.show();
     }
 
-    /** Borra los datos de sesión y vuelve al login dejando la pila limpia. */
+    // Borra la sesión y vuelve al login, para que "atrás" no nos devuelva aquí
     private void cerrarSesion() {
         ConfigApp config = new ConfigApp(this);
         config.setToken("");
