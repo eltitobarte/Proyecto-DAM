@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         config.setUser(usuario);
         config.setRole("FAMILY");
 
-        Intent home = new Intent(this, HomeActivity.class);
+        Intent home = new Intent(this, PMTHomeActivity.class);
         startActivity(home);
         finish();
     }

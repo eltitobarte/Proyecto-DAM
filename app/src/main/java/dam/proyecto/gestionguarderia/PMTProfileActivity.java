@@ -15,7 +15,7 @@ import dam.proyecto.gestionguarderia.services.ConfigApp;
 /**
  * Perfil del usuario de familia: menores, salud, seguridad y cierre de sesión.
  */
-public class ProfileActivity extends AppCompatActivity {
+public class PMTProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,9 @@ public class ProfileActivity extends AppCompatActivity {
         findViewById(R.id.ivMenu).setOnClickListener(v -> finish());
 
         // Menores: lleva al listado de niños
-        findViewById(R.id.cardMinors).setOnClickListener(v -> startActivity(new Intent(this, BabyListActivity.class)));
-        findViewById(R.id.rowChild1).setOnClickListener(v -> startActivity(new Intent(this, BabyListActivity.class)));
-        findViewById(R.id.rowChild2).setOnClickListener(v -> startActivity(new Intent(this, BabyListActivity.class)));
+        findViewById(R.id.cardMinors).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
+        findViewById(R.id.rowChild1).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
+        findViewById(R.id.rowChild2).setOnClickListener(v -> startActivity(new Intent(this, PMTBabyListActivity.class)));
 
         // TODO Salud/alergias y cambio de contraseña: pendientes de su Activity
         findViewById(R.id.cardHealth).setOnClickListener(v -> avisoProximamente());

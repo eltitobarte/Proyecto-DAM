@@ -32,19 +32,19 @@
 
         <!-- Perfil familia: navegación principal -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".PMTHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".BabyListActivity"
+            android:name=".PMTBabyListActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatListActivity"
+            android:name=".PMTChatListActivity"
             android:exported="false" />
         <activity
-            android:name=".AdvicesActivity"
+            android:name=".PMTAdvicesActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".PMTProfileActivity"
             android:exported="false" />
     </application>
 

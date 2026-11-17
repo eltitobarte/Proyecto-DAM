@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
  * Es el centro de navegación: desde aquí se entra a los seis accesos de la rejilla
  * y a los dos iconos de la barra superior.
  */
-public class HomeActivity extends AppCompatActivity {
+public class PMTHomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +31,16 @@ public class HomeActivity extends AppCompatActivity {
         // --- Barra superior ---
         // TODO Menú lateral (drawer): pendiente de decidir con el equipo
         findViewById(R.id.ivMenu).setOnClickListener(v -> avisoProximamente());
-        findViewById(R.id.ivProfile).setOnClickListener(v -> abrir(ProfileActivity.class));
+        findViewById(R.id.ivProfile).setOnClickListener(v -> abrir(PMTProfileActivity.class));
 
         // --- Tarjeta del niño: lleva al listado de menores ---
-        findViewById(R.id.cardChild).setOnClickListener(v -> abrir(BabyListActivity.class));
+        findViewById(R.id.cardChild).setOnClickListener(v -> abrir(PMTBabyListActivity.class));
 
         // --- Rejilla de accesos ---
-        findViewById(R.id.cardBaby).setOnClickListener(v -> abrir(BabyListActivity.class));
-        findViewById(R.id.cardChat).setOnClickListener(v -> abrir(ChatListActivity.class));
-        findViewById(R.id.cardNotices).setOnClickListener(v -> abrir(AdvicesActivity.class));
-        findViewById(R.id.cardProfile).setOnClickListener(v -> abrir(ProfileActivity.class));
+        findViewById(R.id.cardBaby).setOnClickListener(v -> abrir(PMTBabyListActivity.class));
+        findViewById(R.id.cardChat).setOnClickListener(v -> abrir(PMTChatListActivity.class));
+        findViewById(R.id.cardNotices).setOnClickListener(v -> abrir(PMTAdvicesActivity.class));
+        findViewById(R.id.cardProfile).setOnClickListener(v -> abrir(PMTProfileActivity.class));
 
         // Calendario y comedor: sus layouts ya existen, pero todavía no tienen Activity
         findViewById(R.id.cardCalendar).setOnClickListener(v -> avisoProximamente());

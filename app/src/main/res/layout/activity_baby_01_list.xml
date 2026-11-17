@@ -18,7 +18,7 @@
     android:layout_height="match_parent"
     android:background="@color/back_screen"
     android:fillViewport="true"
-    tools:context=".BabyListActivity">
+    tools:context=".PMTBabyListActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
