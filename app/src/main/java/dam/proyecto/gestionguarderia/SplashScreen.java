@@ -26,9 +26,11 @@ public class SplashScreen extends AppCompatActivity {
             return insets;
         });
 
-        // TODO SERVICIOS
+        // TODO SERVICIOS: inicializar BD local y comprobar sesión antes de decidir a dónde ir
         Intent login = new Intent(SplashScreen.this, LoginActivity.class);
         startActivity(login);
+        // Se cierra el splash para que «atrás» desde el login no vuelva aquí en bucle
+        finish();
 
     }
 }

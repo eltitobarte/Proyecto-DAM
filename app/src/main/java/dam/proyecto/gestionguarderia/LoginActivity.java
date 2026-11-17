@@ -2,6 +2,7 @@ package dam.proyecto.gestionguarderia;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,7 +11,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import dam.proyecto.gestionguarderia.services.ConfigApp;
+
 public class LoginActivity extends AppCompatActivity {
+
+    private TextInputLayout tilUser;
+    private TextInputLayout tilPassword;
+    private TextInputEditText etUser;
+    private TextInputEditText etPassword;
+    private CheckBox cbRemember;
+    private ConfigApp config;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +37,74 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
+        config = new ConfigApp(this);
+
+        tilUser = findViewById(R.id.tilUser);
+        tilPassword = findViewById(R.id.tilPassword);
+        etUser = findViewById(R.id.etUser);
+        etPassword = findViewById(R.id.etPassword);
+        cbRemember = findViewById(R.id.cbRemember);
+        MaterialButton btnLogin = findViewById(R.id.btnLogin);
         TextView tvForgot = findViewById(R.id.tvForgot);
+
         tvForgot.setOnClickListener(v -> {
             Intent forgot = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
             startActivity(forgot);
         });
+
+        btnLogin.setOnClickListener(v -> acceder());
+
+        // Al rellenar el usuario se quita el error del campo anterior
+        etUser.setOnFocusChangeListener((v, tieneFoco) -> {
+            if (tieneFoco) {
+                tilUser.setError(null);
+            }
+        });
+        etPassword.setOnFocusChangeListener((v, tieneFoco) -> {
+            if (tieneFoco) {
+                tilPassword.setError(null);
+            }
+        });
+    }
+
+    /**
+     * Valida el formulario y, si está bien, guarda la sesión y entra al inicio.
+     *
+     * TODO Conexión real: validar contra la API (ApiServiceMock de momento) y guardar el token.
+     */
+    private void acceder() {
+        String usuario = textoSeguro(etUser);
+        String contrasena = textoSeguro(etPassword);
+
+        boolean valido = true;
+
+        if (usuario.isEmpty()) {
+            tilUser.setError(getString(R.string.login_error_user));
+            valido = false;
+        }
+        if (contrasena.isEmpty()) {
+            tilPassword.setError(getString(R.string.login_error_pwd));
+            valido = false;
+        }
+        if (!valido) {
+            return;
+        }
+
+        // Sesión de momento local (mock): usuario y rol FAMILY
+        // TODO Recordar contraseña: guardar la preferencia cuando exista la conexión real
+        config.setUser(usuario);
+        config.setRole("FAMILY");
+
+        Intent home = new Intent(this, HomeActivity.class);
+        startActivity(home);
+        finish();
+    }
+
+    /** Devuelve el texto del campo sin espacios sobrantes y sin NullPointerException. */
+    private String textoSeguro(TextInputEditText campo) {
+        if (campo.getText() == null) {
+            return "";
+        }
+        return campo.getText().toString().trim();
     }
 }
