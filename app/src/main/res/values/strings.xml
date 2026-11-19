@@ -196,6 +196,10 @@
     <string name="health_saved">Etiqueta guardada</string>
     <string name="health_deleted">Etiqueta eliminada</string>
 
+    <!-- Aviso antes de eliminar una etiqueta médica -->
+    <string name="health_delete_title">¿Eliminar esta etiqueta?</string>
+    <string name="health_delete_body">Se borrará de la ficha médica del menor. Después no se puede recuperar.</string>
+
     <!-- Diálogo de cerrar sesión -->
     <string name="logout_warning_sign">!</string>
     <string name="logout_title">¿Cerrar sesión en este dispositivo?</string>

@@ -7,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -56,11 +57,8 @@ public class PMTHealthActivity extends AppCompatActivity {
             finish();
         });
 
-        // TODO: pedir confirmación antes de eliminar, como en el cierre de sesión
-        findViewById(R.id.btnDelete).setOnClickListener(v -> {
-            Toast.makeText(this, R.string.health_deleted, Toast.LENGTH_SHORT).show();
-            finish();
-        });
+        // Eliminar: antes de borrar preguntamos, para no cargárnosla sin querer
+        findViewById(R.id.btnDelete).setOnClickListener(v -> preguntarEliminar());
 
         findViewById(R.id.btnCancel).setOnClickListener(v -> finish());
 
@@ -70,6 +68,23 @@ public class PMTHealthActivity extends AppCompatActivity {
 
         // Empezamos con la primera marcada
         elegirCategoria(elegida);
+    }
+
+    // Pregunta antes de eliminar la etiqueta médica.
+    // Uso un AlertDialog normal porque no hay diseño hecho para este aviso
+    // y así sale centrado y con los dos botones bien colocados.
+    private void preguntarEliminar() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.health_delete_title)
+                .setMessage(R.string.health_delete_body)
+                .setPositiveButton(R.string.health_delete, (dialogo, opcion) -> {
+                    // El usuario dice que sí: avisamos y volvemos al perfil
+                    Toast.makeText(this, R.string.health_deleted, Toast.LENGTH_SHORT).show();
+                    finish();
+                })
+                // Null = solo cierra el aviso y no borra nada
+                .setNegativeButton(R.string.health_cancel, null)
+                .show();
     }
 
     // Marca la categoría elegida y apaga las demás
